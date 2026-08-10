@@ -1,0 +1,275 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#efe9e2;
+    font-family: "Inter", sans-serif;
+    color:#111;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+    width:100%;
+    padding:35px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    background:rgba(239,233,226,.92);
+    backdrop-filter:blur(12px);
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.menu{
+    display:flex;
+    gap:50px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#111;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#b98a2f;
+}
+
+.hamburger{
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding-top:90px;
+}
+
+.hero-image{
+
+    width:min(92%,1300px);
+
+    display:block;
+}
+
+/* ===========================
+   SOBRE MI
+=========================== */
+
+.about{
+
+    padding:140px 8%;
+
+}
+
+.about-container{
+
+    max-width:900px;
+    margin:auto;
+
+}
+
+.about-subtitle{
+
+    display:block;
+
+    letter-spacing:4px;
+
+    color:#999;
+
+    margin-bottom:20px;
+
+    font-size:13px;
+
+}
+
+.about h2{
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    margin-bottom:30px;
+
+    font-weight:700;
+
+}
+
+.about p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+/* ===========================
+   INTRO
+=========================== */
+
+.intro{
+
+    text-align:center;
+
+    margin-top:-180px;
+
+    padding:0 8% 120px;
+
+}
+
+.line{
+
+    width:50px;
+
+    height:1px;
+
+    background:#111;
+
+    margin:25px auto;
+
+}
+
+.intro h2{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+}
+
+.intro span{
+
+    margin:0 15px;
+
+}
+
+.intro p{
+
+    max-width:760px;
+
+    margin:45px auto;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+.intro-btn{
+
+    display:inline-block;
+
+    border:1px solid #111;
+
+    padding:22px 55px;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.intro-btn:hover{
+
+    background:#111;
+
+    color:white;
+
+}
+.socials{
+
+    position:fixed;
+
+    right:55px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:28px;
+
+    z-index:999;
+
+}
+
+.socials a{
+
+    color:#111;
+
+    font-size:28px;
+
+    transition:.3s;
+
+}
+
+.socials a:hover{
+
+    color:#c79b39;
+
+    transform:scale(1.15);
+
+}
+
+.social-line{
+
+    width:1px;
+
+    height:80px;
+
+    background:#777;
+
+}
