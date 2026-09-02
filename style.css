@@ -19,12 +19,30 @@ html {
 }
 
 body {
-    background: #efe9e2;
+    margin: 0;
+    padding: 0;
+
     color: #111;
     font-family: "Inter", Arial, sans-serif;
+
+    background-image: url("fondo 1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     overflow-x: hidden;
 }
 
+/* Celular */
+@media (max-width: 768px) {
+    body {
+        background-image: url("fondo-rosa-suave.jpg");
+        background-size: cover;
+        background-position: center top;
+        background-attachment: scroll;
+    }
+}
 
 /* =========================================================
    HEADER
@@ -38,23 +56,82 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
 
-    background: rgba(239, 233, 226, 0.94);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    /* Deja ver el fondo detrás del menú */
+    background: transparent;
 
     z-index: 1000;
+
+    /* Ocultar / mostrar al hacer scroll */
+    transform: translateY(0);
+    transition: transform 0.45s ease;
+}
+
+.header.header-hidden {
+    transform: translateY(-100%);
 }
 
 .logo {
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    animation: aparecerLogo 1.2s ease forwards;
 }
 
+.logo img {
+    width: 400px;
+    height: auto;
+    display: block;
+}
+
+.menu a {
+    opacity: 0;
+    animation: aparecerMenu 0.8s ease forwards;
+}
+
+.menu a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.menu a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.menu a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.menu a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes aparecerLogo {
+
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparecerMenu {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .menu {
     display: flex;
     align-items: center;
@@ -62,10 +139,11 @@ body {
 }
 
 .menu a {
-    color: #111;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
+    font-family: "Anton", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     transition: 0.3s;
 }
 
@@ -93,7 +171,18 @@ body {
     justify-content: center;
     align-items: center;
 
-    padding: 110px 30px 40px;
+    padding: -50px 30px 40px;
+}
+.hero-image {
+    display: block;
+
+    width: min(92%, 1300px);
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+
 }
 
 .hero-image {
@@ -104,16 +193,34 @@ body {
     height: auto;
 
     object-fit: contain;
+
 }
 
 
+/* =========================================
+   ENTRADA DEL PORTFOLIO
+   Se ejecuta UNA sola vez
+========================================= */
+
+@keyframes portfolioEntrada {
+
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* =========================================================
    REDES SOCIALES
-   DESKTOP
+   BLANCOS · MÁS GRANDES · MÁS GRUESOS
 ========================================================= */
 
 .socials {
-    position: fixed;
+    position: absolute;
 
     right: 50px;
     top: 50%;
@@ -122,38 +229,129 @@ body {
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
 
-    gap: 28px;
+    gap: 30px;
 
     z-index: 999;
 }
 
+
+/* LINKEDIN · GITHUB · INSTAGRAM */
+
 .socials a {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
-    color: #111;
+    color: #ffffff;
 
-    font-size: 28px;
+    font-size: 36px;
+
+    font-weight: 900;
 
     text-decoration: none;
 
-    transition: 0.3s;
+    /* Hace que los iconos se vean más gruesos */
+    -webkit-text-stroke: 0.7px #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        -webkit-text-stroke 0.3s ease;
 }
 
+
+/* EFECTO AL PASAR EL MOUSE */
+
 .socials a:hover {
-    color: #c79b39;
+    color: #ffffff;
+
+    -webkit-text-stroke: 1px #ffffff;
+
     transform: scale(1.15);
 }
 
-.social-line {
-    width: 1px;
-    height: 80px;
 
-    background: #777;
+/* =========================================================
+   ELIMINAR LA LÍNEA VERTICAL
+========================================================= */
+
+.social-line {
+    display: none !important;
 }
 
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .socials {
+        position: static !important;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 25px;
+
+        margin: 15px 0 45px;
+
+        transform: none !important;
+    }
+
+
+    .socials a {
+        color: #ffffff;
+
+        font-size: 31px;
+
+        font-weight: 900;
+
+        -webkit-text-stroke: 0.6px #ffffff;
+    }
+
+
+    .socials a:hover {
+        color: #ffffff;
+
+        -webkit-text-stroke: 0.8px #ffffff;
+
+        transform: scale(1.1);
+    }
+
+
+    .social-line {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .socials {
+        gap: 22px;
+
+        margin: 10px 0 40px;
+    }
+
+
+    .socials a {
+        font-size: 29px;
+
+        -webkit-text-stroke: 0.5px #ffffff;
+    }
+}
 
 /* =========================================================
    INTRO
@@ -237,6 +435,11 @@ body {
     width: 100%;
 
     padding: 140px 8%;
+
+   background-image: url("fondo 10.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .about-container {
@@ -244,6 +447,60 @@ body {
     max-width: 900px;
 
     margin: 0 auto;
+}
+.about-header-image {
+    width: 680px;
+    max-width: 75%;
+    height: auto;
+    display: block;
+
+    margin: -280px 0 0 -300px;
+}
+.about-title-image {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: -190px auto 30px auto;
+}
+/* =========================================
+   SOBRE MÍ - IMAGEN UNIFICADA
+========================================= */
+
+.about-images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -180px 0 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-main-image {
+    width: 1900px;
+    max-width: 150%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .about-images {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-main-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .about-subtitle {
@@ -257,7 +514,13 @@ body {
 
     letter-spacing: 4px;
 }
-
+@media (max-width: 768px) {
+    .about-header-image {
+        width: 420px;
+        max-width: 95%;
+        margin: -100px 0 0 -40px;
+    }
+}
 .about h2 {
     margin-bottom: 30px;
 
@@ -310,16 +573,15 @@ body {
 }
 
 
-/* =========================================================
-   CELULAR
-   Hasta 768px
-========================================================= */
+/* =========================================
+   RESPONSIVE - TABLET Y CELULAR
+========================================= */
 
 @media (max-width: 768px) {
 
-    /* -----------------------------------------------------
-       EVITAR SCROLL HORIZONTAL
-    ----------------------------------------------------- */
+    /* =========================
+       GENERAL
+    ========================== */
 
     html,
     body {
@@ -328,81 +590,70 @@ body {
         overflow-x: hidden;
     }
 
-
-    /* -----------------------------------------------------
+    /* =========================
        HEADER
-    ----------------------------------------------------- */
+    ========================== */
 
     .header {
         width: 100%;
-
-        padding: 18px 20px;
-
+        padding: 22px 28px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     .logo {
-        max-width: 190px;
-
         font-size: 16px;
         line-height: 1.15;
         letter-spacing: 1.5px;
+        max-width: 180px;
     }
 
-    /* Ocultamos los enlaces en celular */
-
+    /* Ocultamos los links en celular */
     .menu {
         display: none;
     }
 
-    /* Mostramos solamente hamburguesa */
-
+    /* Mostramos solamente el botón */
     .hamburger {
         display: block;
-
-        font-size: 28px;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
     }
 
 
-    /* -----------------------------------------------------
-       HERO
-    ----------------------------------------------------- */
+    /* =========================
+       HERO / PORTFOLIO
+    ========================== */
 
     .hero {
         width: 100%;
-
         min-height: auto;
 
         display: flex;
         justify-content: center;
         align-items: center;
 
-        padding: 105px 16px 35px;
+        padding: 105px 20px 50px;
     }
 
     .hero-image {
         width: 100%;
         max-width: 100%;
-
         height: auto;
-
         display: block;
     }
 
 
-    /* -----------------------------------------------------
+    /* =========================
        REDES SOCIALES
-       YA NO SON FIXED EN CELULAR
-    ----------------------------------------------------- */
+    ========================== */
 
     .socials {
-        position: static;
+        position: static !important;
 
         width: 100%;
-
-        transform: none;
 
         display: flex;
         flex-direction: row;
@@ -412,126 +663,125 @@ body {
 
         gap: 22px;
 
-        margin: 15px auto 40px;
+        margin: 15px 0 45px;
 
-        padding: 0 20px;
+        transform: none !important;
     }
 
     .socials a {
-        display: flex;
-
         font-size: 25px;
+        line-height: 1;
     }
 
-    .social-line {
-        width: 55px;
+    /*
+       Eliminamos la línea que queda
+       colgada al lado de Instagram
+    */
+    .socials .social-line {
+        display: none;
+    }
+
+
+    /* =========================
+       LÍNEAS DECORATIVAS
+    ========================== */
+
+    .line {
+        width: 42px;
         height: 1px;
 
-        background: #777;
+        margin: 22px auto;
     }
 
 
-    /* -----------------------------------------------------
+    /* =========================
        INTRO
-    ----------------------------------------------------- */
+    ========================== */
 
     .intro {
         width: 100%;
 
         margin-top: 0;
 
-        padding: 20px 22px 80px;
-    }
+        padding: 0 28px 90px;
 
-    .line {
-        width: 45px;
-
-        margin: 20px auto;
+        text-align: center;
     }
 
     .intro h2 {
-        width: 100%;
-        max-width: 100%;
-
-        font-size: clamp(28px, 8vw, 42px);
+        font-size: clamp(30px, 8vw, 42px);
 
         line-height: 1.15;
 
-        overflow-wrap: anywhere;
+        letter-spacing: -1px;
+
+        margin: 25px auto;
+
+        max-width: 650px;
     }
 
-    /* Los guiones no generan espacios raros */
-
     .intro span {
-        display: inline;
-        margin: 0 4px;
+        margin: 0;
     }
 
     .intro p {
         width: 100%;
-        max-width: 100%;
+        max-width: 650px;
 
         margin: 35px auto;
-
-        padding: 0 4px;
 
         font-size: 18px;
 
         line-height: 1.65;
+
+        color: #555;
     }
 
     .intro-btn {
+        display: inline-block;
+
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
 
-        padding: 18px 20px;
-
-        font-size: 14px;
+        padding: 18px 25px;
 
         text-align: center;
     }
 
 
-    /* -----------------------------------------------------
+    /* =========================
        SOBRE MÍ
-    ----------------------------------------------------- */
+    ========================== */
 
     .about {
         width: 100%;
 
-        padding: 80px 22px;
+        padding: 90px 28px;
     }
 
     .about-container {
         width: 100%;
-        max-width: 100%;
+        max-width: 700px;
+
+        margin: 0 auto;
     }
 
     .about-subtitle {
-        margin-bottom: 18px;
-
         font-size: 12px;
+        letter-spacing: 4px;
 
-        letter-spacing: 3px;
+        margin-bottom: 18px;
     }
 
     .about h2 {
-        width: 100%;
-        max-width: 100%;
+        font-size: clamp(36px, 9vw, 58px);
+
+        line-height: 1.08;
 
         margin-bottom: 25px;
-
-        font-size: clamp(38px, 11vw, 58px);
-
-        line-height: 1.05;
-
-        overflow-wrap: anywhere;
     }
 
     .about p {
-        width: 100%;
-        max-width: 100%;
-
         font-size: 18px;
 
         line-height: 1.65;
@@ -539,109 +789,82 @@ body {
 }
 
 
-/* =========================================================
+/* =========================================
    CELULARES PEQUEÑOS
-   Hasta 480px
-========================================================= */
+========================================= */
 
 @media (max-width: 480px) {
 
-    /* -----------------------------------------------------
-       HEADER
-    ----------------------------------------------------- */
-
     .header {
-        padding: 17px 18px;
+        padding: 20px 24px;
     }
 
     .logo {
-        max-width: 175px;
-
         font-size: 15px;
         letter-spacing: 1.3px;
     }
 
     .hamburger {
-        font-size: 27px;
+        font-size: 29px;
     }
 
 
-    /* -----------------------------------------------------
-       HERO
-    ----------------------------------------------------- */
+    /* HERO */
 
     .hero {
-        padding: 95px 12px 25px;
+        padding: 100px 18px 40px;
     }
 
     .hero-image {
         width: 100%;
-        max-width: 100%;
     }
 
 
-    /* -----------------------------------------------------
-       REDES
-    ----------------------------------------------------- */
+    /* REDES */
 
     .socials {
-        gap: 18px;
-
-        margin: 10px auto 35px;
+        gap: 20px;
+        margin: 10px 0 42px;
     }
 
     .socials a {
         font-size: 24px;
     }
 
-    .social-line {
-        width: 45px;
-    }
 
-
-    /* -----------------------------------------------------
-       INTRO
-    ----------------------------------------------------- */
+    /* INTRO */
 
     .intro {
-        padding: 15px 20px 70px;
+        padding: 0 22px 75px;
     }
 
     .intro h2 {
-        font-size: 30px;
-        line-height: 1.12;
-    }
-
-    .intro span {
-        margin: 0 3px;
+        font-size: 31px;
+        line-height: 1.15;
+        letter-spacing: -0.8px;
     }
 
     .intro p {
-        margin: 30px auto;
-
         font-size: 17px;
-
         line-height: 1.6;
+        margin: 30px auto;
     }
 
     .intro-btn {
         max-width: 290px;
-
-        padding: 17px 15px;
+        padding: 17px 20px;
     }
 
 
-    /* -----------------------------------------------------
-       SOBRE MÍ
-    ----------------------------------------------------- */
+    /* SOBRE MÍ */
 
     .about {
-        padding: 70px 20px;
+        padding: 75px 22px;
     }
 
     .about h2 {
-        font-size: 42px;
-        line-height: 1.05;
+        font-size: 38px;
+        line-height: 1.08;
     }
 
     .about p {
@@ -649,43 +872,1121 @@ body {
         line-height: 1.6;
     }
 }
+/* =========================================
+   ANIMACIÓN DEL PORTFOLIO
+========================================= */
+
+.hero {
+    perspective: 1000px;
+}
+
+.hero-image {
+    display: block;
+    transition:
+        transform 0.7s cubic-bezier(.2,.8,.2,1),
+        filter 0.7s ease;
+
+    animation: portfolioEntrada 1.2s ease-out both;
+
+    cursor: pointer;
+}
+
+.hero-image:hover {
+    transform: scale(1.025) translateY(-6px);
+    filter: contrast(1.05);
+}
+
+
+/* Entrada */
+
+@keyframes portfolioEntrada {
+
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   ANIMACIÓN PARA CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-image {
+        animation:
+            portfolioEntrada 1.2s ease-out both,
+            portfolioFloat 5s ease-in-out 1.2s infinite;
+    }
+
+    @keyframes portfolioFloat {
+
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-7px);
+        }
+
+    }
+
+}
+/* =========================================
+   INTERACCIONES — TEXTOS
+========================================= */
+
+/* -----------------------------------------
+   INTRO — TÍTULO
+----------------------------------------- */
+
+.intro h2 {
+    transition:
+        transform 0.7s ease,
+        letter-spacing 0.7s ease;
+
+    animation: introTitle 1s ease-out both;
+}
+
+@keyframes introTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+        letter-spacing: 4px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: -1px;
+    }
+
+}
+
+
+/* -----------------------------------------
+   INTRO — PÁRRAFO
+----------------------------------------- */
+
+.intro p {
+    animation: introText 1.2s ease-out 0.2s both;
+}
+
+@keyframes introText {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* -----------------------------------------
+   BOTÓN
+----------------------------------------- */
+
+.intro-btn {
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        color 0.4s ease;
+}
+
+.intro-btn:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   SOBRE MÍ
+========================================= */
+
+.about-subtitle {
+    transition:
+        letter-spacing 0.5s ease,
+        color 0.5s ease;
+}
+
+.about-subtitle:hover {
+    letter-spacing: 7px;
+    color: #b98a2f;
+}
+
+
+/* TÍTULO SOBRE MÍ */
+
+.about h2 {
+    transition:
+        transform 0.7s ease,
+        letter-spacing 0.7s ease;
+
+    animation: aboutTitle 1.2s ease-out both;
+}
+
+@keyframes aboutTitle {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* TEXTO SOBRE MÍ */
+
+.about p {
+    transition:
+        transform 0.5s ease,
+        color 0.5s ease;
+}
+
+.about p:hover {
+    transform: translateX(8px);
+    color: #333;
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .intro h2 {
+        animation: mobileIntroTitle 1s ease-out both;
+    }
+
+    @keyframes mobileIntroTitle {
+
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+
+    .about h2 {
+        animation: mobileAboutTitle 1s ease-out both;
+    }
+
+    @keyframes mobileAboutTitle {
+
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+
+    .about p:hover {
+        transform: none;
+    }
+
+}
+/* =========================================================
+   ANIMACIONES DE TEXTO
+========================================================= */
+
+/* Título principal de INTRO */
+.intro h2 {
+    animation: aparecerTitulo 1.2s ease-out both;
+}
+
+/* Título de SOBRE MÍ */
+.about h2 {
+    animation: aparecerTitulo 1.2s ease-out both;
+    animation-delay: 0.2s;
+}
+
+
+/* Movimiento suave al pasar el mouse */
+.intro h2:hover,
+.about h2:hover {
+    transform: translateY(-6px);
+    transition: transform 0.4s ease;
+}
+
+
+/* Animación de entrada */
+@keyframes aparecerTitulo {
+
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* GARRAZA */
+
+.logo-lastname {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 6px;
+
+    margin-top: -3px;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    animation: aparecerApellido 2.2s ease forwards;
+    animation-delay: 1.5s;
+}
+
+
+/* GARRAZA */
+
+.logo-lastname {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 6px;
+
+    margin-top: -3px;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    animation: aparecerApellido 2.2s ease forwards;
+    animation-delay: 1.5s;
+}
+
+
+/* Animación de GUADALUPE */
+
+@keyframes aparecerNombre {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Animación de GARRAZA */
+
+@keyframes aparecerApellido {
+
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Adaptación para celular */
+
+@media (max-width: 600px) {
+
+    .logo-name {
+        font-size: 32px;
+    }
+
+    .logo-lastname {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+}
+/* =========================================
+   MARQUESINA
+========================================= */
+
+.top-banner-marquee {
+    width: 100%;
+    height: 48px;
+
+    background: #000000;
+    color: #ffffff;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+/* CONTENEDOR QUE SE MUEVE */
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+
+    animation: scroll-left 25s linear infinite;
+}
+
+
+/* CADA BLOQUE DE TEXTO */
+
+.marquee-content {
+    display: flex;
+    flex-shrink: 0;
+}
+
+
+/* TEXTOS */
+
+.marquee-content span {
+    display: inline-block;
+
+    padding: 0 45px;
+
+    color: #ffffff;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes scroll-left {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .top-banner-marquee {
+        height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .marquee-content span {
+        padding: 0 25px;
+    }
+}
+/* =========================================================
+   SKILLS / HABILIDADES
+========================================================= */
+
+.skills {
+    width: 100%;
+    min-height:400px;
+    padding: 10px 40px 130px;
+    box-sizing: border-box;
+    text-align: center;
+    background: transparent;
+}
+
+
+.skills-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
 
 
 /* =========================================================
-   PANTALLAS MUY PEQUEÑAS
-   Hasta 360px
+   TÍTULO HABILIDADES
 ========================================================= */
 
-@media (max-width: 360px) {
+.skills-title-image {
+    width: 800px;
+    max-width: 85%;
+    height: auto;
+    display: block;
+    margin: 0 auto 70px;
+    transform: translateY(70px);
+}
 
-    .logo {
-        font-size: 14px;
+
+/* =========================================================
+   CONTENEDOR DE LOS LOGOS
+========================================================= */
+
+.skills-logos {
+    width: 100%;
+    max-width: 1450px;
+    margin: -40px 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 70px;
+    row-gap: 80px;
+}
+
+
+/* =========================================================
+   CADA LOGO
+========================================================= */
+
+.skill-item {
+    width: 190px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+/* =========================================
+   TAMAÑO INDIVIDUAL DE CADA LOGO
+========================================= */
+
+/* BASE */
+.skill-item img {
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+/* 1 — SHOPIFY */
+.skill-item:nth-child(1) img {
+    width: 400px;
+    height: 400px;
+}
+
+
+/* 2 — GEMINI */
+.skill-item:nth-child(2) img {
+    width: 170px;
+    height: 140px;
+}
+
+
+/* 3 — CHATGPT */
+.skill-item:nth-child(3) img {
+    width: 300px;
+    height: 300px;
+}
+
+
+/* 4 — VISUAL STUDIO CODE */
+.skill-item:nth-child(4) img {
+    width: 160px;
+    height: 160px;
+}
+
+
+/* 5 — CANVA */
+.skill-item:nth-child(5) img {
+    width: 350px;
+    height: 350px;
+}
+
+
+/* 6 — HTML */
+.skill-item:nth-child(6) img {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* 7 — CSS */
+.skill-item:nth-child(7) img {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* 8 — TIENDA NUBE */
+.skill-item:nth-child(8) img {
+    width: 550px;
+    height: 550px;
+}
+
+
+/* 9 — MARKETING DIGITAL */
+.skill-item:nth-child(9) img {
+    width: 500px;
+    height: 500px;
+}
+
+
+/* =========================================================
+   OCULTAR LOS NOMBRES
+========================================================= */
+
+.skill-item span {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MOVIMIENTO INTERACTIVO
+========================================================= */
+
+.skill-item:hover {
+    transform: translateY(-12px);
+}
+
+.skill-item:hover img {
+    transform: scale(1.15);
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,255,255,0.5))
+        drop-shadow(0 0 20px rgba(255,255,255,0.25));
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .skills {
+        min-height: auto;
+        padding: 70px 20px 90px;
     }
 
-    .hero {
-        padding-left: 8px;
-        padding-right: 8px;
+    .skills-title-image {
+        width: 500px;
+        max-width: 95%;
+        margin-bottom: 50px;
     }
 
-    .intro {
-        padding-left: 16px;
-        padding-right: 16px;
+    .skills-logos {
+        column-gap: 25px;
+        row-gap: 45px;
     }
 
-    .intro h2 {
-        font-size: 27px;
+    .skill-item {
+        width: 120px;
+        height: 120px;
     }
 
-    .intro p {
-        font-size: 16px;
+    .skill-item img {
+        width: 90px;
+        height: 90px;
     }
 
-    .about {
-        padding-left: 16px;
-        padding-right: 16px;
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .skills {
+        padding: 60px 15px 80px;
     }
 
-    .about h2 {
-        font-size: 38px;
+    .skills-title-image {
+        width: 420px;
+        max-width: 100%;
+        margin-bottom: 40px;
     }
+
+    .skills-logos {
+        column-gap: 10px;
+        row-gap: 35px;
+    }
+
+    .skill-item {
+        width: 95px;
+        height: 100px;
+    }
+
+    .skill-item img {
+        width: 75px;
+        height: 75px;
+    }
+
+}
+/* ==========================================
+   MARQUESINA SOBRE MI → HABILIDADES
+   ========================================== */
+
+.top-banner-marquee {
+    width: 100%;
+    height: 42px;
+
+    background: #000000;
+    color: #ffffff;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    position: relative;
+    z-index: 10;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+
+    animation: scroll-left 30s linear infinite;
+}
+
+.marquee-content {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.marquee-content span {
+    padding: 0 3rem;
+    letter-spacing: 0.3px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    .top-banner-marquee {
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .marquee-content span {
+        padding: 0 2rem;
+    }
+}
+/* =========================================
+   MIS PROYECTOS
+========================================= */
+
+.projects {
+    width: 100%;
+    padding: 0px 40px 120px;
+    text-align: center;
+}
+
+.projects-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -180px;
+}
+
+.projects-title-image {
+    width: 800px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   TÍTULOS DE LOS PROYECTOS
+========================================= */
+
+.projects-titles {
+    width: 100%;
+    max-width: 1500px;
+    margin: -30 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 35px;
+}
+
+.project-title-image {
+    width: calc(33.333% - 25px);
+    height: auto;
+    display: block;
+}
+/* =========================================
+   VIDEOS DE LOS PROYECTOS
+========================================= */
+
+.projects-videos {
+    width: 100%;
+    max-width: 1500px;
+    margin: -190px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 35px;
+}
+
+.projects-videos video {
+    width: calc(33.333% - 25px);
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    background: #000;
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.projects-videos video:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35);
+}
+/* =========================================
+   DESCRIPCIONES DE LOS PROYECTOS
+========================================= */
+
+.projects-descriptions {
+    width: 100%;
+    max-width: 1500px;
+    margin: 30px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 35px;
+}
+
+.project-description-image {
+    width: calc(33.333% - 25px);
+    height: auto;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* EFECTO SUAVE */
+
+.project-description-image:hover {
+    transform: translateY(-5px);
+}
+/* =========================================
+   CERTIFICADOS
+========================================= */
+
+.certificados {
+    width: 100%;
+    padding: 60px 40px 100px;
+    text-align: center;
+}
+
+
+/* TÍTULO */
+
+.certificados-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.certificados-title-image {
+    width: 500px;
+    max-width: 80%;
+    height: auto;
+}
+
+
+/* =========================================
+   CONTENEDOR DE CERTIFICADOS
+========================================= */
+
+.certificados-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px;
+}
+
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.certificado-card {
+    text-align: center;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+/* =========================================
+   IMAGEN DEL CERTIFICADO
+========================================= */
+
+.certificado-imagen {
+    overflow: hidden;
+    border-radius: 10px;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.certificado-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* =========================================
+   INTERACCIÓN AL PASAR EL MOUSE
+========================================= */
+
+.certificado-card:hover {
+    transform: translateY(-10px);
+}
+
+.certificado-card:hover .certificado-imagen {
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.certificado-card:hover .certificado-imagen img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   INFORMACIÓN
+========================================= */
+
+.certificado-info {
+    padding: 20px 15px 0;
+}
+
+.certificado-info h3 {
+    margin: 0 0 10px;
+
+    font-family: "Times New Roman", Georgia, serif;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    color: white;
+}
+
+.certificado-info p {
+    margin: 0 auto 12px;
+
+    max-width: 480px;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: white;
+}
+
+.certificado-info span {
+    display: inline-block;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    color: white;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .certificados {
+        padding: 50px 20px 80px;
+    }
+
+    .certificados-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .certificados-title-image {
+        width: 400px;
+        max-width: 90%;
+    }
+
+    .certificado-info h3 {
+        font-size: 21px;
+    }
+
+}
+/* =========================================
+   ANIMACIONES AL HACER SCROLL
+========================================= */
+
+/* Estado inicial */
+.scroll-animate {
+    opacity: 0;
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+/* Aparece desde abajo */
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Aparece desde la izquierda */
+.slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+/* Aparece desde la derecha */
+.slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+/* Aparece solamente con desvanecimiento */
+.fade-in {
+    opacity: 0;
+    transform: translateY(0);
+}
+
+/* Cuando JavaScript activa la animación */
+.scroll-animate.show {
+    opacity: 1;
+    transform: translate(0);
+}
+.project-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.project-card:nth-child(3) {
+    transition-delay: 0.4s;
+}
+/* =========================
+   ANIMACIÓN TÍTULO SOBRE MÍ
+========================= */
+
+@keyframes aparecerSobreMi {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-title-image {
+    animation: aparecerSobreMi 1s ease-out forwards;
 }
