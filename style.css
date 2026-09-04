@@ -2583,3 +2583,49 @@ body {
         gap: 30px;
     }
 }
+/* =========================================
+   CORRECCIÓN PORTADA / PORTFOLIO
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin: 0;
+        object-fit: contain;
+    }
+}
