@@ -2,42 +2,71 @@
 // HEADER — OCULTAR AL BAJAR / MOSTRAR AL SUBIR
 // =========================================
 
-document.addEventListener("DOMContentLoaded", () => {
+const header = document.querySelector(".header");
+
+let ultimaPosicion = window.scrollY;
+
+window.addEventListener("scroll", () => {
+
+    const posicionActual = window.scrollY;
+
+    // Arriba de todo → header visible
+    if (posicionActual <= 80) {
+        header.classList.remove("header-hidden");
+        ultimaPosicion = posicionActual;
+        return;
+    }
+
+    // Scroll hacia abajo → ocultar
+    if (posicionActual > ultimaPosicion) {
+        header.classList.add("header-hidden");
+    }
+
+    // Scroll hacia arriba → mostrar
+    else if (posicionActual < ultimaPosicion) {
+        header.classList.remove("header-hidden");
+    }
+
+    ultimaPosicion = posicionActual;
+});
+// =========================================
+// HEADER: OCULTAR AL BAJAR / MOSTRAR AL SUBIR
+// =========================================
+
+document.addEventListener("DOMContentLoaded", function () {
 
     const header = document.querySelector(".header");
 
     if (!header) return;
 
-    let ultimaPosicion = window.scrollY;
+    let lastScroll = 0;
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", function () {
 
-        const posicionActual = window.scrollY;
+        const currentScroll = window.pageYOffset;
 
-        // Arriba de todo → header visible
-        if (posicionActual <= 80) {
+        // Estamos arriba de todo
+        if (currentScroll <= 50) {
             header.classList.remove("header-hidden");
-            ultimaPosicion = posicionActual;
+            lastScroll = currentScroll;
             return;
         }
 
-        // Scroll hacia abajo → ocultar
-        if (posicionActual > ultimaPosicion) {
+        // Bajando
+        if (currentScroll > lastScroll) {
             header.classList.add("header-hidden");
         }
 
-        // Scroll hacia arriba → mostrar
-        else if (posicionActual < ultimaPosicion) {
+        // Subiendo
+        if (currentScroll < lastScroll) {
             header.classList.remove("header-hidden");
         }
 
-        ultimaPosicion = posicionActual;
+        lastScroll = currentScroll;
 
     });
 
 });
-
-
 // =========================================
 // ANIMACIONES AL HACER SCROLL
 // =========================================
@@ -45,8 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
 
     const elementos = document.querySelectorAll(".scroll-animate");
-
-    if (!elementos.length) return;
 
     const observer = new IntersectionObserver((entries) => {
 
