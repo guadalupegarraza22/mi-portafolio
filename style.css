@@ -2526,8 +2526,8 @@ body {
     }
 
     .hero {
-        padding: 25px 10px 20px;
-    }
+    padding: 0;
+}
 
     .intro {
         padding: 35px 18px 55px;
