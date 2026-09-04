@@ -37,7 +37,7 @@ body {
 /* Celular */
 @media (max-width: 768px) {
     body {
-        background-image: url("fondo-rosa-suave.jpg");
+        background-image: url("fondo 1.jpg");
         background-size: cover;
         background-position: center top;
         background-attachment: scroll;
