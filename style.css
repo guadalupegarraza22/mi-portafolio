@@ -1468,8 +1468,8 @@ body {
 
 /* 8 — TIENDA NUBE */
 .skill-item:nth-child(8) img {
-    width: 550px;
-    height: 550px;
+    width: 430px;
+    height: 430px;
 }
 
 
@@ -1989,4 +1989,196 @@ body {
 
 .about-title-image {
     animation: aparecerSobreMi 1s ease-out forwards;
+}
+/* =========================================
+   CORRECCIÓN LOGOS SKILLS
+   INTERACCIÓN Y ESPACIADO
+========================================= */
+
+.skill-item {
+    width: 220px;
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+
+    transition: transform 0.4s ease;
+}
+
+.skill-item img {
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    position: relative;
+    z-index: 2;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+/* AJUSTE DE LOGOS PEQUEÑOS */
+
+.skill-item:nth-child(5) img {
+    width: 350px;
+}
+
+.skill-item:nth-child(8) img {
+    width: 430px;
+}
+
+.skill-item:nth-child(9) img {
+    width: 400px;
+}
+/* Cuando pasás el mouse */
+.skill-item:hover {
+    transform: translateY(-12px);
+    z-index: 50;
+}
+
+.skill-item:hover img {
+    transform: scale(1.12);
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,255,255,0.5))
+        drop-shadow(0 0 20px rgba(255,255,255,0.25));
+}
+.skill-item img {
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    position: relative;
+    z-index: 2;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+/* =========================================
+   INTERACCIÓN — TÍTULO MIS PROYECTOS
+========================================= */
+
+.projects-title-image {
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+/* Movimiento al pasar el mouse */
+.projects-title-image:hover {
+    transform: translateY(-8px) scale(1.03);
+    filter: brightness(1.08);
+}
+/* =========================================
+   SOMBRA DINÁMICA AL PASAR EL MOUSE
+   TÍTULOS DE LOS PROYECTOS
+========================================= */
+
+.project-title-image {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-title-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+/* =========================================
+   SUBRAYADO ANIMADO — MENÚ
+========================================= */
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+/* =========================================
+   ZOOM SUAVE — TÍTULO CERTIFICADOS
+========================================= */
+
+.certificados-title-image {
+    display: block;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.certificados-title-image:hover {
+    transform: scale(1.05);
+}
+/* =========================================
+   ZOOM SUAVE — TÍTULO HABILIDADES
+========================================= */
+
+.skills-title-image {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.skills-title-image:hover {
+    transform: scale(1.05);
+}
+/* =========================================
+   ZOOM SUAVE — TÍTULO SOBRE MÍ
+========================================= */
+
+.about-title-image {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.about-title-image:hover {
+    transform: scale(1.05);
+}
+/* =========================================
+   ZOOM SUAVE — PORFOLIO 2026
+========================================= */
+
+.about-header-image {
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.about-header-image:hover {
+    transform: scale(1.05);
+}
+/* =========================================
+   EFECTO PROFUNDIDAD — SOBRE MÍ
+========================================= */
+
+.about-main-image {
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+    cursor: pointer;
+}
+
+.about-main-image:hover {
+    transform: translateY(-8px);
+    filter: brightness(1.05);
 }
