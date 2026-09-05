@@ -2708,7 +2708,7 @@ body {
 
 @media (max-width: 768px) {
 
-    .menu.menu-open {
+    .menu.menu-abierto a
         display: flex !important;
         position: absolute;
         top: 70px;
@@ -2728,7 +2728,7 @@ body {
         border-radius: 10px;
     }
 
-    .menu.menu-open a {
+    .menu.menu-abierto a
         display: block;
         opacity: 1;
         animation: none;
@@ -2737,7 +2737,7 @@ body {
     }
 
     /* En celular mostramos solamente 3 */
-    .menu.menu-open a:nth-child(4) {
+    .menu.menu-abierto a a:nth-child(4) {
         display: none;
     }
 }
