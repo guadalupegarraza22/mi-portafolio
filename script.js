@@ -119,3 +119,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// =========================================
+// MENÚ CELULAR — ABRIR / CERRAR ☰
+// =========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
+
+    if (!hamburger || !menu) return;
+
+    hamburger.addEventListener("click", function () {
+
+        menu.classList.toggle("menu-open");
+
+    });
+
+});
