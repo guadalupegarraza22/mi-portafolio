@@ -2629,27 +2629,40 @@ body {
     }
 }
 /* =========================================
-   ☰ MENÚ CELULAR
+   MENÚ CELULAR ☰
 ========================================= */
 
 @media (max-width: 768px) {
 
-    .header {
-        position: relative;
-    }
-
-    .hamburger {
+    .header .hamburger {
         display: block !important;
-        position: absolute;
-        right: 22px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2000;
+        position: absolute !important;
+
+        right: 20px !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        width: 40px !important;
+        height: 40px !important;
+
+        z-index: 9999 !important;
 
         color: #ffffff !important;
-        font-size: 30px;
-        line-height: 1;
-        cursor: pointer;
+        font-size: 0 !important;
+
+        cursor: pointer !important;
     }
 
+    .header .hamburger::before {
+        content: "☰";
+
+        display: block;
+
+        color: #ffffff !important;
+        font-size: 30px !important;
+        line-height: 40px;
+
+        text-align: center;
+    }
 }
