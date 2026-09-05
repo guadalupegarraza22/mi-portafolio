@@ -2749,6 +2749,7 @@ body {
 
     .hero {
         padding: 0 !important;
+        margin-top: -35px !important;
         overflow: hidden;
     }
 
@@ -2756,7 +2757,6 @@ body {
         width: 108% !important;
         max-width: none !important;
         margin-left: -4%;
-        transform: translateY(-35px);
     }
 
 }
