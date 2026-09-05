@@ -2781,83 +2781,103 @@ body {
 
 }
 /* =========================================
-   SOBRE MI - COMPOSICIÓN CELULAR
-   SOLO CELULAR
+   SOBRE MI - COMPOSICIÓN CORRECTA EN CELULAR
+   SOLO AFECTA CELULARES
 ========================================= */
 
 @media (max-width: 768px) {
 
     .about {
         width: 100% !important;
-        padding: 25px 0 35px !important;
+        padding: 0 !important;
+        margin: 0 !important;
         overflow: hidden !important;
     }
 
     .about-container {
         width: 100% !important;
+        height: 210px !important;
         max-width: none !important;
-        height: auto !important;
-        position: relative !important;
         margin: 0 !important;
         padding: 0 !important;
+        position: relative !important;
+        overflow: hidden !important;
     }
 
-    /* PORTFOLIO 2026
-       ARRIBA A LA IZQUIERDA */
+    /* =====================================
+       1. PORTFOLIO 2026
+       ARRIBA A LA IZQUIERDA
+    ===================================== */
+
     .about-header-image {
-        display: block !important;
-        width: 170px !important;
+        position: absolute !important;
+
+        top: 20px !important;
+        left: 25px !important;
+
+        width: 190px !important;
         max-width: none !important;
         height: auto !important;
-        margin: 0 0 0 25px !important;
-        position: relative !important;
+
+        margin: 0 !important;
+
         z-index: 3 !important;
     }
 
-    /* SOBRE MI
-       DEBAJO Y CENTRADO */
+
+    /* =====================================
+       2. SOBRE MI
+       CENTRADO
+    ===================================== */
+
     .about-title-image {
-        display: block !important;
+        position: absolute !important;
+
+        top: 55px !important;
+        left: 50% !important;
+
         width: 350px !important;
         max-width: none !important;
         height: auto !important;
 
-        margin: -5px auto 0 auto !important;
+        margin: 0 !important;
 
-        position: relative !important;
-        left: 50% !important;
         transform: translateX(-50%) !important;
 
         z-index: 2 !important;
     }
 
-    /* CONTENEDOR DE LA FOTO + DESCRIPCIÓN */
+
+    /* =====================================
+       3. TEXTO + FOTO
+       CENTRADO DEBAJO
+    ===================================== */
+
     .about-images {
+        position: absolute !important;
+
+        top: 115px !important;
+        left: 0 !important;
+
         width: 100% !important;
+
         display: flex !important;
         justify-content: center !important;
-        align-items: center !important;
+        align-items: flex-start !important;
 
-        margin: -5px 0 0 0 !important;
+        margin: 0 !important;
         padding: 0 !important;
 
-        position: relative !important;
         z-index: 1 !important;
     }
 
-    /* IMAGEN CON TEXTO + FOTO
-       CENTRADA */
     .about-main-image {
-        display: block !important;
-
         width: 360px !important;
         max-width: none !important;
         height: auto !important;
 
         margin: 0 auto !important;
 
-        position: relative !important;
-        left: auto !important;
-        transform: none !important;
+        display: block !important;
     }
 }
