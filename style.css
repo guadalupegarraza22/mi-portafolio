@@ -2781,66 +2781,83 @@ body {
 
 }
 /* =========================================
-   SOBRE MI - CELULAR
+   SOBRE MI - COMPOSICIÓN CELULAR
+   SOLO CELULAR
 ========================================= */
 
 @media (max-width: 768px) {
 
     .about {
         width: 100% !important;
-        padding: 35px 0 40px !important;
+        padding: 25px 0 35px !important;
         overflow: hidden !important;
-        box-sizing: border-box;
     }
 
     .about-container {
         width: 100% !important;
         max-width: none !important;
-        margin: 0 auto !important;
+        height: auto !important;
         position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* 1. PORTFOLIO 2026 - ARRIBA A LA IZQUIERDA */
+    /* PORTFOLIO 2026
+       ARRIBA A LA IZQUIERDA */
     .about-header-image {
         display: block !important;
-        width: 85% !important;
+        width: 170px !important;
         max-width: none !important;
         height: auto !important;
-        margin: 0 auto 0 25px !important;
+        margin: 0 0 0 25px !important;
         position: relative !important;
         z-index: 3 !important;
     }
 
-    /* 2. SOBRE MI - DEBAJO Y CENTRADO */
+    /* SOBRE MI
+       DEBAJO Y CENTRADO */
     .about-title-image {
         display: block !important;
-        width: 100% !important;
+        width: 350px !important;
         max-width: none !important;
         height: auto !important;
-        margin: -10px auto 10px auto !important;
+
+        margin: -5px auto 0 auto !important;
+
         position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+
         z-index: 2 !important;
     }
 
-    /* 3. TEXTO + FOTO - CENTRADO */
+    /* CONTENEDOR DE LA FOTO + DESCRIPCIÓN */
     .about-images {
         width: 100% !important;
         display: flex !important;
         justify-content: center !important;
-        align-items: flex-start !important;
-        margin: 0 auto !important;
+        align-items: center !important;
+
+        margin: -5px 0 0 0 !important;
         padding: 0 !important;
+
         position: relative !important;
         z-index: 1 !important;
-        overflow: visible !important;
     }
 
+    /* IMAGEN CON TEXTO + FOTO
+       CENTRADA */
     .about-main-image {
         display: block !important;
-        width: 125% !important;
+
+        width: 360px !important;
         max-width: none !important;
         height: auto !important;
+
         margin: 0 auto !important;
+
         position: relative !important;
+        left: auto !important;
+        transform: none !important;
     }
 }
