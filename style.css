@@ -2666,3 +2666,39 @@ body {
         text-align: center;
     }
 }
+/* =========================================
+   ENCABEZADO CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        grid-column: 2;
+        justify-self: center;
+        position: relative;
+        top: -20px;
+        z-index: 1001;
+    }
+
+    .logo img {
+        width: 260px;
+        max-width: 70vw;
+        height: auto;
+    }
+
+    .hamburger {
+        grid-column: 3;
+        justify-self: end;
+        position: relative;
+        top: -20px;
+        z-index: 9999;
+    }
+}
