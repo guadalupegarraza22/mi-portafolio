@@ -37,7 +37,7 @@ body {
 @media (max-width: 768px) {
     body {
         background-image: url("fondo 1 vertical.jpg");
-        background-size: cover;
+        background-size: 120% auto;
         background-position: center top;
         background-attachment: scroll;
         background-repeat: repeat-y;
