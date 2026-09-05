@@ -2823,23 +2823,66 @@ body {
 
         z-index: 3 !important;
     }
+/* =========================================
+   SOBRE MI - AJUSTE FINAL CELULAR
+   SOLO CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .about {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .about-container {
+        width: 100% !important;
+        max-width: none !important;
+        height: 210px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
 
 
     /* =====================================
-       2. SOBRE MI
-       CENTRADO
+       PORTFOLIO 2026
+       MÁS ARRIBA + MÁS PEQUEÑO
+    ===================================== */
+
+    .about-header-image {
+        position: absolute !important;
+
+        top: -45px !important;
+        left: 22px !important;
+
+        width: 145px !important;
+        max-width: none !important;
+
+        height: auto !important;
+        margin: 0 !important;
+
+        z-index: 3 !important;
+    }
+
+
+    /* =====================================
+       SOBRE MI
+       MÁS ARRIBA Y CENTRADO
     ===================================== */
 
     .about-title-image {
         position: absolute !important;
 
-        top: 55px !important;
+        top: 5px !important;
         left: 50% !important;
 
-        width: 350px !important;
+        width: 330px !important;
         max-width: none !important;
-        height: auto !important;
 
+        height: auto !important;
         margin: 0 !important;
 
         transform: translateX(-50%) !important;
@@ -2849,14 +2892,14 @@ body {
 
 
     /* =====================================
-       3. TEXTO + FOTO
-       CENTRADO DEBAJO
+       TEXTO + FOTO
+       MÁS ARRIBA Y CENTRADO
     ===================================== */
 
     .about-images {
         position: absolute !important;
 
-        top: 115px !important;
+        top: 75px !important;
         left: 0 !important;
 
         width: 100% !important;
@@ -2874,10 +2917,12 @@ body {
     .about-main-image {
         width: 360px !important;
         max-width: none !important;
+
         height: auto !important;
 
         margin: 0 auto !important;
 
         display: block !important;
     }
+
 }
