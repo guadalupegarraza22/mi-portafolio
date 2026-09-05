@@ -2926,3 +2926,10 @@ body {
     }
 
 }
+@media (max-width: 768px) {
+    .about-header-image {
+        width: 100px !important;
+        left: 0 !important;
+        top: -100px !important;
+    }
+}
