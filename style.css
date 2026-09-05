@@ -614,11 +614,12 @@ body {
 
     /* Mostramos solamente el botón */
     .hamburger {
-        display: block;
-        font-size: 30px;
-        line-height: 1;
-        cursor: pointer;
-    }
+    display: block;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    justify-self: end;
+}
 
 
     /* =========================
