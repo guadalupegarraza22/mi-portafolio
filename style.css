@@ -2855,8 +2855,8 @@ body {
     .about-header-image {
         position: absolute !important;
 
-        top: -45px !important;
-        left: 22px !important;
+        top: -70px !important;
+        left: 5px !important;
 
         width: 145px !important;
         max-width: none !important;
