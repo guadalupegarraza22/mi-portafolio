@@ -2741,3 +2741,20 @@ body {
     }
 
 }
+/* =========================================
+   AJUSTE PORTFOLIO + REDES EN CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding-top: 5px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .socials {
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+}
