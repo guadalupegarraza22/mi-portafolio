@@ -2780,3 +2780,67 @@ body {
     }
 
 }
+/* =========================================
+   SOBRE MI - CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .about {
+        width: 100% !important;
+        padding: 35px 0 40px !important;
+        overflow: hidden !important;
+        box-sizing: border-box;
+    }
+
+    .about-container {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+
+    /* 1. PORTFOLIO 2026 - ARRIBA A LA IZQUIERDA */
+    .about-header-image {
+        display: block !important;
+        width: 85% !important;
+        max-width: none !important;
+        height: auto !important;
+        margin: 0 auto 0 25px !important;
+        position: relative !important;
+        z-index: 3 !important;
+    }
+
+    /* 2. SOBRE MI - DEBAJO Y CENTRADO */
+    .about-title-image {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
+        margin: -10px auto 10px auto !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    /* 3. TEXTO + FOTO - CENTRADO */
+    .about-images {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        position: relative !important;
+        z-index: 1 !important;
+        overflow: visible !important;
+    }
+
+    .about-main-image {
+        display: block !important;
+        width: 125% !important;
+        max-width: none !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+}
