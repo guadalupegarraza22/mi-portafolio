@@ -94,3 +94,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// =========================================
+// MENÚ CELULAR — ABRIR / CERRAR
+// =========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".menu");
+
+    if (!hamburger || !menu) return;
+
+    hamburger.addEventListener("click", () => {
+        menu.classList.toggle("menu-abierto");
+    });
+
+    // Cerrar el menú al tocar una opción
+    const enlaces = menu.querySelectorAll("a");
+
+    enlaces.forEach((enlace) => {
+        enlace.addEventListener("click", () => {
+            menu.classList.remove("menu-abierto");
+        });
+    });
+
+});
