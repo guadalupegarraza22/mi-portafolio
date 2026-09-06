@@ -2807,14 +2807,13 @@ body {
        1. PORTFOLIO 2026
        ARRIBA - IZQUIERDA
     ================================ */
-
 .about-header-image {
     position: absolute !important;
 
-    top: 0px !important;
-    left: -25px !important;
+    top: -35px !important;
+    left: -45px !important;
 
-    width: 360px !important;
+    width: 500px !important;
     max-width: none !important;
     height: auto !important;
 
@@ -2822,6 +2821,7 @@ body {
 
     z-index: 3 !important;
 }
+
 
     /* ================================
        2. SOBRE MI
