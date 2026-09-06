@@ -2781,50 +2781,7 @@ body {
 
 }
 /* =========================================
-   SOBRE MI - COMPOSICIÓN CORRECTA EN CELULAR
-   SOLO AFECTA CELULARES
-========================================= */
-
-@media (max-width: 768px) {
-
-    .about {
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        overflow: hidden !important;
-    }
-
-    .about-container {
-        width: 100% !important;
-        height: 210px !important;
-        max-width: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        position: relative !important;
-        overflow: hidden !important;
-    }
-
-    /* =====================================
-       1. PORTFOLIO 2026
-       ARRIBA A LA IZQUIERDA
-    ===================================== */
-
-    .about-header-image {
-        position: absolute !important;
-
-        top: 20px !important;
-        left: 25px !important;
-
-        width: 190px !important;
-        max-width: none !important;
-        height: auto !important;
-
-        margin: 0 !important;
-
-        z-index: 3 !important;
-    }
-/* =========================================
-   SOBRE MI - AJUSTE FINAL CELULAR
+   SOBRE MI - DISEÑO CELULAR
    SOLO CELULAR
 ========================================= */
 
@@ -2840,49 +2797,47 @@ body {
     .about-container {
         width: 100% !important;
         max-width: none !important;
-        height: 210px !important;
+        height: 650px !important;
         margin: 0 !important;
         padding: 0 !important;
         position: relative !important;
     }
 
-
-    /* =====================================
-       PORTFOLIO 2026
-       MÁS ARRIBA + MÁS PEQUEÑO
-    ===================================== */
+    /* ================================
+       1. PORTFOLIO 2026
+       ARRIBA - IZQUIERDA
+    ================================ */
 
     .about-header-image {
         position: absolute !important;
 
-        top: -70px !important;
-        left: 5px !important;
+        top: 20px !important;
+        left: 20px !important;
 
-        width: 145px !important;
+        width: 150px !important;
         max-width: none !important;
-
         height: auto !important;
+
         margin: 0 !important;
 
         z-index: 3 !important;
     }
 
-
-    /* =====================================
-       SOBRE MI
-       MÁS ARRIBA Y CENTRADO
-    ===================================== */
+    /* ================================
+       2. SOBRE MI
+       CENTRADO
+    ================================ */
 
     .about-title-image {
         position: absolute !important;
 
-        top: 5px !important;
+        top: 95px !important;
         left: 50% !important;
 
-        width: 330px !important;
+        width: 340px !important;
         max-width: none !important;
-
         height: auto !important;
+
         margin: 0 !important;
 
         transform: translateX(-50%) !important;
@@ -2890,46 +2845,39 @@ body {
         z-index: 2 !important;
     }
 
-
-    /* =====================================
-       TEXTO + FOTO
-       MÁS ARRIBA Y CENTRADO
-    ===================================== */
+    /* ================================
+       3. TEXTO + FOTO
+       DEBAJO DE SOBRE MI
+       CENTRADO
+    ================================ */
 
     .about-images {
         position: absolute !important;
 
-        top: 75px !important;
-        left: 0 !important;
+        top: 270px !important;
+        left: 50% !important;
 
         width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
 
         display: flex !important;
         justify-content: center !important;
         align-items: flex-start !important;
 
-        margin: 0 !important;
-        padding: 0 !important;
+        transform: translateX(-50%) !important;
 
         z-index: 1 !important;
     }
 
     .about-main-image {
+        display: block !important;
+
         width: 360px !important;
         max-width: none !important;
-
         height: auto !important;
 
         margin: 0 auto !important;
-
-        display: block !important;
-    }
-
-}
-@media (max-width: 768px) {
-    .about-header-image {
-        width: 100px !important;
-        left: 0 !important;
-        top: -100px !important;
     }
 }
