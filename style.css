@@ -2812,7 +2812,7 @@ body {
     position: absolute !important;
 
     top: 0px !important;
-    left: 8px !important;
+    left: -25px !important;
 
     width: 360px !important;
     max-width: none !important;
@@ -2831,7 +2831,7 @@ body {
     .about-title-image {
         position: absolute !important;
 
-        top: 95px !important;
+        top: 60px !important;
         left: 50% !important;
 
         width: 340px !important;
@@ -2854,7 +2854,7 @@ body {
     .about-images {
         position: absolute !important;
 
-        top: 270px !important;
+        top: 210px !important;
         left: 50% !important;
 
         width: 100% !important;
