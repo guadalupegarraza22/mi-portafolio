@@ -2808,13 +2808,13 @@ body {
        ARRIBA - IZQUIERDA
     ================================ */
 
-    .about-header-image {
+.about-header-image {
     position: absolute !important;
 
-    top: 5px !important;
-    left: 5px !important;
+    top: 0px !important;
+    left: 10px !important;
 
-    width: 250px !important;
+    width: 300px !important;
     max-width: none !important;
     height: auto !important;
 
