@@ -2812,9 +2812,9 @@ body {
     position: absolute !important;
 
     top: 0px !important;
-    left: 10px !important;
+    left: 8px !important;
 
-    width: 300px !important;
+    width: 360px !important;
     max-width: none !important;
     height: auto !important;
 
@@ -2874,7 +2874,7 @@ body {
     .about-main-image {
         display: block !important;
 
-        width: 360px !important;
+        width: 480px !important;
         max-width: none !important;
         height: auto !important;
 
