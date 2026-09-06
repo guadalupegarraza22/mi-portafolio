@@ -2881,3 +2881,20 @@ body {
         margin: 0 auto !important;
     }
 }
+/* =========================================
+   📱 INTERACCIÓN PORTFOLIO 2026
+   SOLO CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .about-header-image {
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+
+    .about-header-image:active {
+        transform: scale(1.08);
+    }
+
+}
