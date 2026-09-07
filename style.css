@@ -2376,12 +2376,12 @@ body {
         align-items: center;
     }
 
-    .skill-item img {
-        width: 75px !important;
-        height: 75px !important;
-        max-width: 100%;
-        object-fit: contain;
-    }
+   .skill-item img {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    object-fit: contain;
+}
 
     /* =========================
        MIS PROYECTOS
@@ -2899,63 +2899,130 @@ body {
 
 }
 /* =========================================================
-   PRUEBA TAMAÑO LOGOS — SOLO CELULAR
+   HABILIDADES — ADAPTACIÓN CELULAR
+   MISMOS TAMAÑOS QUE COMPUTADORA
 ========================================================= */
 
 @media (max-width: 768px) {
 
-    .skills-logos .skill-item:nth-child(1) img {
+    .skills-logos {
+        width: 100%;
+        max-width: none;
+
+        margin: -40px 0 0 0;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        column-gap: 20px;
+        row-gap: 60px;
+
+        overflow: visible;
+    }
+
+
+    /* CONTENEDOR DE CADA LOGO */
+
+    .skill-item {
+        width: 190px !important;
+        height: 150px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+
+    /* =====================================================
+       1 — SHOPIFY
+    ===================================================== */
+
+    .skill-item:nth-child(1) img {
         width: 400px !important;
         height: 400px !important;
-        border: 3px solid red !important;
     }
 
-    .skills-logos .skill-item:nth-child(2) img {
+
+    /* =====================================================
+       2 — GEMINI
+    ===================================================== */
+
+    .skill-item:nth-child(2) img {
         width: 170px !important;
         height: 140px !important;
-        border: 3px solid red !important;
     }
 
-    .skills-logos .skill-item:nth-child(3) img {
+
+    /* =====================================================
+       3 — CHATGPT
+    ===================================================== */
+
+    .skill-item:nth-child(3) img {
         width: 300px !important;
         height: 300px !important;
-        border: 3px solid red !important;
     }
 
-    .skills-logos .skill-item:nth-child(4) img {
+
+    /* =====================================================
+       4 — VISUAL STUDIO CODE
+    ===================================================== */
+
+    .skill-item:nth-child(4) img {
         width: 160px !important;
         height: 160px !important;
-        border: 3px solid red !important;
     }
 
-    .skills-logos .skill-item:nth-child(5) img {
+
+    /* =====================================================
+       5 — CANVA
+    ===================================================== */
+
+    .skill-item:nth-child(5) img {
         width: 350px !important;
         height: 350px !important;
-        border: 3px solid red !important;
     }
 
-    .skills-logos .skill-item:nth-child(6) img {
+
+    /* =====================================================
+       6 — HTML
+    ===================================================== */
+
+    .skill-item:nth-child(6) img {
         width: 150px !important;
         height: 150px !important;
-        border: 3px solid red !important;
     }
 
-    .skills-logos .skill-item:nth-child(7) img {
+
+    /* =====================================================
+       7 — CSS
+    ===================================================== */
+
+    .skill-item:nth-child(7) img {
         width: 150px !important;
         height: 150px !important;
-        border: 3px solid red !important;
     }
 
-    .skills-logos .skill-item:nth-child(8) img {
+
+    /* =====================================================
+       8 — TIENDA NUBE
+    ===================================================== */
+
+    .skill-item:nth-child(8) img {
         width: 430px !important;
         height: 430px !important;
-        border: 3px solid red !important;
     }
 
-    .skills-logos .skill-item:nth-child(9) img {
+
+    /* =====================================================
+       9 — MARKETING DIGITAL
+    ===================================================== */
+
+    .skill-item:nth-child(9) img {
         width: 500px !important;
         height: 500px !important;
-        border: 3px solid red !important;
     }
 
 }
