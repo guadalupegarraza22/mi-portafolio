@@ -3059,31 +3059,30 @@ body {
 .sobre-boton:active img {
     transform: scale(0.95);
 }
+
 @media (max-width: 768px) {
 
     .sobres-navegacion {
-    width: 100%;
-    gap: 8px;
-    margin: 20px auto 45px;
-    position: relative;
-    z-index: 100 !important;
-}
-   .sobre-boton {
-    width: 32%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 101 !important;
-    pointer-events: auto !important;
-}
-.sobre-boton {
-    width: 32%;
-    display: flex;
-    justify-content: center;
-}
+        width: 100%;
+        gap: 8px;
+        margin: 100px auto 45px;
+        position: relative;
+        z-index: 100 !important;
+    }
 
-.sobres-navegacion .sobre-boton img {
-    width: 98px !important;
-    max-width: none !important;
-    height: auto !important;
+    .sobre-boton {
+        width: 32%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 101 !important;
+        pointer-events: auto !important;
+    }
+
+    .sobres-navegacion .sobre-boton img {
+        width: 110px !important;
+        max-width: none !important;
+        height: auto !important;
+    }
+
 }
