@@ -3068,6 +3068,14 @@ body {
     position: relative;
     z-index: 100 !important;
 }
+   .sobre-boton {
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 101 !important;
+    pointer-events: auto !important;
+}
 .sobre-boton {
     width: 32%;
     display: flex;
