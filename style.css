@@ -3062,11 +3062,12 @@ body {
 @media (max-width: 768px) {
 
     .sobres-navegacion {
-        width: 100%;
-        gap: 8px;
-        margin: 20px auto 45px;
-    }
-
+    width: 100%;
+    gap: 8px;
+    margin: 20px auto 45px;
+    position: relative;
+    z-index: 100 !important;
+}
 .sobre-boton {
     width: 32%;
     display: flex;
