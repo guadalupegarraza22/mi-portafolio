@@ -2546,7 +2546,11 @@ body {
     height: auto;
     margin: 0 auto;
 }
-
+.projects-titles,
+.projects-videos,
+.projects-descriptions {
+    display: none;
+}
 /* =========================================================
    📱 CELULARES MUY PEQUEÑOS
    ========================================================= */
