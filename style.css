@@ -3071,9 +3071,10 @@ body {
         width: 30%;
     }
 
-    .sobre-boton img {
-        width: 100%;
-        height: auto;
+    .sobres-navegacion .sobre-boton img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
     }
 
 }
