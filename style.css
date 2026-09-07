@@ -3067,14 +3067,14 @@ body {
         margin: 20px auto 45px;
     }
 
-    .sobre-boton {
-        width: 30%;
-    }
+.sobre-boton {
+    width: 32%;
+    display: flex;
+    justify-content: center;
+}
 
-    .sobres-navegacion .sobre-boton img {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
+.sobres-navegacion .sobre-boton img {
+    width: 110px !important;
+    max-width: none !important;
+    height: auto !important;
 }
