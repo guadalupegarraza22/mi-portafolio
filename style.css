@@ -3048,6 +3048,7 @@ body {
     width: 800px;
     height: auto;
     display: block;
+    border: 3px solid red;
     transition: transform 0.3s ease;
 }
 
