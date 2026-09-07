@@ -3026,3 +3026,53 @@ body {
     }
 
 }
+/* =========================================
+   SOBRES DE NAVEGACIÓN
+========================================= */
+
+.sobres-navegacion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 30px auto 60px;
+}
+
+.sobre-boton {
+    display: block;
+    cursor: pointer;
+}
+
+.sobre-boton img {
+    width: 150px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.sobre-boton:hover img {
+    transform: scale(1.08);
+}
+
+.sobre-boton:active img {
+    transform: scale(0.95);
+}
+@media (max-width: 768px) {
+
+    .sobres-navegacion {
+        width: 100%;
+        gap: 8px;
+        margin: 20px auto 45px;
+    }
+
+    .sobre-boton {
+        width: 30%;
+    }
+
+    .sobre-boton img {
+        width: 100%;
+        height: auto;
+    }
+
+}
