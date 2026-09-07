@@ -2508,7 +2508,44 @@ body {
         font-size: 15px;
     }
 }
+/* =========================================
+   PROYECTOS ORDENADOS SOLO EN CELULAR
+========================================= */
 
+.projects-mobile {
+    display: block;
+    width: 100%;
+}
+
+.project-mobile-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+.project-mobile-title {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.project-mobile-video {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 15px;
+    margin: 0 auto 15px;
+}
+
+.project-mobile-description {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: 0 auto;
+}
 
 /* =========================================================
    📱 CELULARES MUY PEQUEÑOS
