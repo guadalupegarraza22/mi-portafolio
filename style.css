@@ -3045,7 +3045,7 @@ body {
 }
 
 .sobre-boton img {
-    width: 150px;
+    width: 300px;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
