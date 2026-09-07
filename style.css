@@ -2906,19 +2906,19 @@ body {
 
     /* Shopify */
     .skills-logos .skill-item:nth-child(1) img {
-        width: 150px !important;
+        width: 180px !important;
         height: auto !important;
     }
 
     /* Gemini */
     .skills-logos .skill-item:nth-child(2) img {
-        width: 125px !important;
+        width: 180px !important;
         height: auto !important;
     }
 
     /* ChatGPT */
     .skills-logos .skill-item:nth-child(3) img {
-        width: 115px !important;
+        width: 180px !important;
         height: auto !important;
     }
 
@@ -2936,25 +2936,25 @@ body {
 
     /* HTML */
     .skills-logos .skill-item:nth-child(6) img {
-        width: 100px !important;
+        width: 130px !important;
         height: auto !important;
     }
 
     /* CSS */
     .skills-logos .skill-item:nth-child(7) img {
-        width: 100px !important;
+        width: 120px !important;
         height: auto !important;
     }
 
     /* Tienda Nube */
     .skills-logos .skill-item:nth-child(8) img {
-        width: 145px !important;
+        width: 300px !important;
         height: auto !important;
     }
 
     /* Marketing Digital */
     .skills-logos .skill-item:nth-child(9) img {
-        width: 145px !important;
+        width: 250px !important;
         height: auto !important;
     }
 }
