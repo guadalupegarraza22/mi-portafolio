@@ -3044,11 +3044,11 @@ body {
     cursor: pointer;
 }
 
-.sobre-boton img {
-    width: 800px;
-    height: auto;
-    display: block;
-    border: 3px solid red;
+.sobres-navegacion .sobre-boton img {
+    width: 250px !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block !important;
     transition: transform 0.3s ease;
 }
 
