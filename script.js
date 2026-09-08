@@ -119,3 +119,100 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// =========================================
+// MIS PROYECTOS — ORDENAR SOLO EN CELULAR
+// =========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const projects = document.querySelector(".projects");
+    const titles = document.querySelectorAll(".project-title-image");
+    const videos = document.querySelectorAll(".projects-videos video");
+    const descriptions = document.querySelectorAll(".project-description-image");
+
+    if (!projects || titles.length < 3 || videos.length < 3 || descriptions.length < 3) {
+        return;
+    }
+
+    let mobileContainer = null;
+    let placeholders = [];
+
+    function activarOrdenMobile() {
+
+        if (mobileContainer) return;
+
+        // Guardar la posición original de cada elemento
+        const elementos = [
+            ...titles,
+            ...videos,
+            ...descriptions
+        ];
+
+        placeholders = elementos.map((elemento) => {
+
+            const placeholder = document.createComment("posición original");
+
+            elemento.parentNode.insertBefore(placeholder, elemento);
+
+            return {
+                elemento: elemento,
+                placeholder: placeholder
+            };
+
+        });
+
+        // Crear contenedor para celular
+        mobileContainer = document.createElement("div");
+        mobileContainer.className = "projects-mobile";
+
+        // Insertarlo después del título principal
+        const projectsTitle = projects.querySelector(".projects-title");
+
+        projectsTitle.after(mobileContainer);
+
+        // Crear los 3 proyectos
+        for (let i = 0; i < 3; i++) {
+
+            const proyecto = document.createElement("div");
+            proyecto.className = "project-mobile-item";
+
+            proyecto.appendChild(titles[i]);
+            proyecto.appendChild(videos[i]);
+            proyecto.appendChild(descriptions[i]);
+
+            mobileContainer.appendChild(proyecto);
+        }
+
+    }
+
+    function desactivarOrdenMobile() {
+
+        if (!mobileContainer) return;
+
+        // Devolver cada elemento a su lugar original
+        placeholders.forEach(({ elemento, placeholder }) => {
+            placeholder.parentNode.insertBefore(elemento, placeholder);
+            placeholder.remove();
+        });
+
+        mobileContainer.remove();
+
+        mobileContainer = null;
+        placeholders = [];
+    }
+
+    function comprobarPantalla() {
+
+        if (window.innerWidth <= 768) {
+            activarOrdenMobile();
+        } else {
+            desactivarOrdenMobile();
+        }
+
+    }
+
+    comprobarPantalla();
+
+    window.addEventListener("resize", comprobarPantalla);
+
+});
