@@ -462,6 +462,8 @@ body {
     height: auto;
     display: block;
     margin: -190px auto 30px auto;
+    position: relative;
+    z-index: 2;
 }
 /* =========================================
    SOBRE MÍ - IMAGEN UNIFICADA
@@ -483,6 +485,8 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 /* =========================================
