@@ -1991,7 +1991,7 @@ body {
 }
 
 .about-title-image {
-    animation: aparecerSobreMi 1s ease-out forwards;
+    /* animation: aparecerSobreMi 1s ease-out forwards; */
 }
 /* =========================================
    CORRECCIÓN LOGOS SKILLS
