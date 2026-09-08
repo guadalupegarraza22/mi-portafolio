@@ -1,35 +1,4 @@
 // =========================================
-// HEADER — OCULTAR AL BAJAR / MOSTRAR AL SUBIR
-// =========================================
-
-const header = document.querySelector(".header");
-
-let ultimaPosicion = window.scrollY;
-
-window.addEventListener("scroll", () => {
-
-    const posicionActual = window.scrollY;
-
-    // Arriba de todo → header visible
-    if (posicionActual <= 80) {
-        header.classList.remove("header-hidden");
-        ultimaPosicion = posicionActual;
-        return;
-    }
-
-    // Scroll hacia abajo → ocultar
-    if (posicionActual > ultimaPosicion) {
-        header.classList.add("header-hidden");
-    }
-
-    // Scroll hacia arriba → mostrar
-    else if (posicionActual < ultimaPosicion) {
-        header.classList.remove("header-hidden");
-    }
-
-    ultimaPosicion = posicionActual;
-});
-// =========================================
 // HEADER: OCULTAR AL BAJAR / MOSTRAR AL SUBIR
 // =========================================
 
