@@ -3184,15 +3184,14 @@ body {
     display:block;
   }
 
-    /* Videos */
-  .projects-videos video{
-    width:50% !important;
-    max-width:-10px !important;
+ .projects-videos video{
+    width:220px !important;
+    max-width:220px !important;
     height:auto !important;
     border-radius:16px;
     display:block;
     margin:0 auto;
-  }
+}
 
   /* Descripciones */
   .project-description-image{
