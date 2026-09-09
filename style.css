@@ -3197,3 +3197,19 @@ body {
         margin: 0 auto !important;
     }
 }
+/* =========================================
+   VIDEOS DE PROYECTOS - CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .projects-mobile video {
+        width: 180px !important;
+        max-width: 180px !important;
+        height: auto !important;
+        display: block !important;
+        margin: 0 auto 15px !important;
+        border-radius: 16px !important;
+    }
+
+}
