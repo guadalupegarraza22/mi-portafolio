@@ -3192,8 +3192,8 @@ body {
 @media (max-width: 768px) {
 
     .projects-mobile video {
-        width: 220px !important;
-        max-width: 220px !important;
+        width: 300px !important;
+        max-width: 300px !important;
         height: auto !important;
         display: block !important;
         margin: 0 auto 15px !important;
