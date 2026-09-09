@@ -3207,12 +3207,14 @@ body {
 @media (max-width: 768px) {
 
     .projects-videos video {
-        width: 180px !important;
-        max-width: 180px !important;
-        min-width: 180px !important;
+        width: 100px !important;
+        max-width: 100px !important;
+        min-width: 100px !important;
         height: auto !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
+
+}
 
 }
