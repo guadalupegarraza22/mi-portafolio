@@ -3166,19 +3166,7 @@ body {
         margin-top: -335px !important;
     }
 
-    /* VIDEOS */
-    .projects-videos video {
-        width: 100px !important;
-        max-width: 100px !important;
-        min-width: 0 !important;
-        height: auto !important;
-        display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        border-radius: 16px !important;
-    }
-
-    .projects-descriptions {
+   .projects-descriptions {
         display: flex !important;
         flex-direction: column !important;
         gap: 40px !important;
