@@ -3187,7 +3187,7 @@ body {
     /* Videos */
   .projects-videos video{
     width:90% !important;
-    max-width:300px !important;
+    max-width:100px !important;
     height:auto !important;
     border-radius:16px;
     display:block;
