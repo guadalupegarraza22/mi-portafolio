@@ -3192,7 +3192,7 @@ body {
 @media (max-width: 768px) {
 
     .projects-mobile {
-        transform: translateY(-80px) !important;
+        transform: translateY(-110px) !important;
     }
 
     .projects-mobile video {
