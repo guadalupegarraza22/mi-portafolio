@@ -3129,90 +3129,71 @@ body {
 }
 /* =========================================
    MIS PROYECTOS - SOLO CELULAR
-   (sin modificar el HTML)
 ========================================= */
 
 @media (max-width: 768px) {
 
-  /* Contenedor principal */
-  .projects{
-    padding:40px 18px 70px !important;
-  }
+    .projects {
+        padding: 30px 15px 60px !important;
+        width: 100% !important;
+    }
 
-  /* Título Mis Proyectos */
-  .projects-title-image{
-    width:92% !important;
-    max-width:340px !important;
-    display:block;
-    margin:0 auto 30px !important;
-  }
+    .projects-title-image {
+        width: 92% !important;
+        max-width: 340px !important;
+        margin: 0 auto 30px !important;
+    }
 
-  /* Cada bloque usa el mismo ancho */
-  .projects-titles,
-  .projects-videos,
-  .projects-descriptions{
-    width:100% !important;
-    max-width:360px !important;
-    margin:0 auto !important;
-  }
-
-  /* Uno debajo del otro */
-  .projects-titles{
-    display:flex !important;
-    flex-direction:column !important;
-    gap:35px !important;
-  }
-
-  .projects-videos{
-    display:flex !important;
-    flex-direction:column !important;
-    gap:120px !important;
-    margin-top:-335px !important;
-  }
-
-  .projects-descriptions{
-    display:flex !important;
-    flex-direction:column !important;
-    gap:120px !important;
-    margin-top:20px !important;
-  }
-
-  /* Títulos */
-  .project-title-image{
-    width:100% !important;
-    max-width:330px !important;
-    display:block;
-  }
-
- .projects-videos video{
-    width:220px !important;
-    max-width:220px !important;
-    height:auto !important;
-    border-radius:16px;
-    display:block;
-    margin:0 auto;
-}
-
-  /* Descripciones */
-  .project-description-image{
-    width:100% !important;
-    display:block;
-  }
-
-}
-/* =========================================
-   PRUEBA TAMAÑO VIDEOS CELULAR
-========================================= */
-
-@media (max-width: 768px) {
-
-    .projects-videos video {
-        width: 100px !important;
-        max-width: 100px !important;
-        min-width: 100px !important;
-        height: auto !important;
+    .projects-titles,
+    .projects-videos,
+    .projects-descriptions {
+        width: 100% !important;
+        max-width: 360px !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
 
+    .projects-titles {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 35px !important;
+    }
+
+    .projects-videos {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+        margin-top: -335px !important;
+    }
+
+    /* VIDEOS */
+    .projects-videos video {
+        width: 180px !important;
+        max-width: 180px !important;
+        min-width: 0 !important;
+        height: auto !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border-radius: 16px !important;
+    }
+
+    .projects-descriptions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+        margin-top: 20px !important;
+    }
+
+    .project-title-image {
+        width: 100% !important;
+        max-width: 330px !important;
+        margin: 0 auto !important;
+    }
+
+    .project-description-image {
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto !important;
+    }
 }
