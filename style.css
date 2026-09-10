@@ -3205,3 +3205,166 @@ body {
     }
 
 }
+/* =========================================
+   SELECTOR DE IDIOMA
+   COMPUTADORA
+========================================= */
+
+.language-toggle {
+    position: relative;
+
+    width: 105px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    margin-left: auto;
+    margin-right: 35px;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* Ocultar checkbox original */
+
+.language-toggle input {
+    display: none;
+}
+
+
+/* Fondo del interruptor */
+
+.language-slider {
+    position: absolute;
+
+    width: 58px;
+    height: 30px;
+
+    left: 0;
+    top: 6px;
+
+    background: #cfcfcf;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Círculo */
+
+.language-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 26px;
+    height: 26px;
+
+    left: 2px;
+    top: 2px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* Texto */
+
+.language-text {
+    position: absolute;
+
+    left: 68px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    user-select: none;
+}
+
+
+/* Cuando está en EN */
+
+.language-toggle input:checked + .language-slider {
+    background: #222222;
+}
+
+
+.language-toggle input:checked + .language-slider::before {
+    transform: translateX(28px);
+}
+
+
+.language-toggle input:checked ~ .language-text {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SELECTOR DE IDIOMA
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .language-toggle {
+        position: absolute;
+
+        right: 68px;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        width: 72px;
+        height: 36px;
+
+        margin: 0;
+
+        z-index: 9999;
+    }
+
+
+    .language-slider {
+        width: 46px;
+        height: 24px;
+
+        top: 6px;
+    }
+
+
+    .language-slider::before {
+        width: 20px;
+        height: 20px;
+
+        top: 2px;
+        left: 2px;
+    }
+
+
+    .language-text {
+        left: 53px;
+
+        font-size: 13px;
+    }
+
+
+    .language-toggle input:checked + .language-slider::before {
+        transform: translateX(20px);
+    }
+
+}
