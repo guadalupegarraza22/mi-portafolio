@@ -3310,17 +3310,15 @@ body {
     transform: translateX(28px);
 }
 
-
 /* =========================================
-   CELULAR
+   SELECTOR DE IDIOMA
+   COMPUTADORA
 ========================================= */
 
-@media (max-width: 768px) {
-
-    .language-toggle {
+.language-toggle {
     position: absolute;
 
-    right: 20px;
+    right: 35px;
     top: 50%;
 
     transform: translateY(-50%);
@@ -3337,6 +3335,108 @@ body {
 
     z-index: 9999;
 }
+
+
+/* Ocultar checkbox */
+
+.language-toggle input {
+    display: none;
+}
+
+
+/* Fondo del interruptor */
+
+.language-slider {
+    position: absolute;
+
+    width: 58px;
+    height: 30px;
+
+    left: 0;
+    top: 6px;
+
+    background: #cfcfcf;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Círculo */
+
+.language-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 26px;
+    height: 26px;
+
+    left: 2px;
+    top: 2px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* Texto ES / EN */
+
+.language-text {
+    position: absolute;
+
+    left: 68px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    user-select: none;
+}
+
+
+/* ACTIVADO — EN */
+
+.language-toggle input:checked + .language-slider {
+    background: #222222;
+}
+
+.language-toggle input:checked + .language-slider::before {
+    transform: translateX(28px);
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .language-toggle {
+        position: absolute;
+
+        right: 58px;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        width: 72px;
+        height: 36px;
+
+        margin: 0;
+
+        z-index: 9999;
+    }
 
 
     .language-slider {
