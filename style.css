@@ -3414,6 +3414,248 @@ body {
 .language-toggle input:checked + .language-slider::before {
     transform: translateX(28px);
 }
+/* =========================================
+   SELECTOR DE IDIOMA
+   COMPUTADORA
+========================================= */
+
+.language-toggle {
+    position: absolute;
+
+    right: 25px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 90px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    z-index: 9999;
+}
+
+
+/* Ocultar checkbox */
+
+.language-toggle input {
+    display: none;
+}
+
+
+/* =========================================
+   FONDO DEL INTERRUPTOR
+========================================= */
+
+.language-slider {
+    position: absolute;
+
+    width: 58px;
+    height: 30px;
+
+    left: 0;
+    top: 6px;
+
+    background: #cfcfcf;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   CÍRCULO
+========================================= */
+
+.language-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 26px;
+    height: 26px;
+
+    left: 2px;
+    top: 2px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   TEXTO ES / EN
+========================================= */
+
+.language-text {
+    position: absolute;
+
+    left: 65px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    user-select: none;
+}
+
+
+/* =========================================
+   CUANDO ESTÁ EN INGLÉS
+========================================= */
+
+.language-toggle input:checked + .language-slider {
+    background: #222222;
+}
+
+.language-toggle input:checked + .language-slider::before {
+    transform: translateX(28px);
+}
+
+
+/* =========================================
+   COMPUTADORA
+   DEJAR ESPACIO PARA EL SELECTOR
+========================================= */
+
+@media (min-width: 769px) {
+
+    .menu {
+        margin-right: 115px;
+    }
+
+}
+
+
+/* =========================================
+   SELECTOR DE IDIOMA
+   COMPUTADORA + CELULAR
+========================================= */
+
+.language-toggle {
+    position: absolute;
+
+    left: 30px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 90px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    z-index: 9999;
+}
+
+
+/* =========================================
+   OCULTAR CHECKBOX
+========================================= */
+
+.language-toggle input {
+    display: none;
+}
+
+
+/* =========================================
+   FONDO DEL INTERRUPTOR
+========================================= */
+
+.language-slider {
+    position: absolute;
+
+    width: 58px;
+    height: 30px;
+
+    left: 0;
+    top: 6px;
+
+    background: #cfcfcf;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   CÍRCULO
+========================================= */
+
+.language-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 26px;
+    height: 26px;
+
+    left: 2px;
+    top: 2px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   TEXTO ES / EN
+========================================= */
+
+.language-text {
+    position: absolute;
+
+    left: 65px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    user-select: none;
+}
+
+
+/* =========================================
+   EN ACTIVADO
+========================================= */
+
+.language-toggle input:checked + .language-slider {
+    background: #222222;
+}
+
+.language-toggle input:checked + .language-slider::before {
+    transform: translateX(28px);
+}
 
 
 /* =========================================
@@ -3423,9 +3665,9 @@ body {
 @media (max-width: 768px) {
 
     .language-toggle {
-        position: absolute;
+        left: 25px;
+        right: auto;
 
-        right: 58px;
         top: 50%;
 
         transform: translateY(-50%);
@@ -3439,29 +3681,38 @@ body {
     }
 
 
+    /* Fondo del interruptor */
+
     .language-slider {
         width: 46px;
         height: 24px;
 
+        left: 0;
         top: 6px;
     }
 
+
+    /* Círculo */
 
     .language-slider::before {
         width: 20px;
         height: 20px;
 
-        top: 2px;
         left: 2px;
+        top: 2px;
     }
 
 
+    /* Texto */
+
     .language-text {
-        left: 53px;
+        left: 52px;
 
         font-size: 13px;
     }
 
+
+    /* Movimiento EN */
 
     .language-toggle input:checked + .language-slider::before {
         transform: translateX(20px);
