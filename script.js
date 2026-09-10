@@ -185,3 +185,25 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", comprobarPantalla);
 
 });
+// =========================================
+// SELECTOR DE IDIOMA — ES / EN
+// =========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const languageToggle = document.getElementById("languageToggle");
+    const languageText = document.getElementById("languageText");
+
+    if (!languageToggle || !languageText) return;
+
+    languageToggle.addEventListener("change", () => {
+
+        if (languageToggle.checked) {
+            languageText.textContent = "EN";
+        } else {
+            languageText.textContent = "ES";
+        }
+
+    });
+
+});
