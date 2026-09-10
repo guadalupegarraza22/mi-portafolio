@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 // =========================================
-// SELECTOR DE IDIOMA — ES / EN
+// SELECTOR DE IDIOMA — ESPAÑOL / INGLÉS
 // =========================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -196,14 +196,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!languageToggle || !languageText) return;
 
-    languageToggle.addEventListener("change", () => {
 
-        if (languageToggle.checked) {
+    // =========================================
+    // ELEMENTOS QUE TIENEN TRADUCCIÓN
+    // =========================================
+
+    const elementosTraducibles = document.querySelectorAll(
+        "[data-es][data-en]"
+    );
+
+
+    // =========================================
+    // CAMBIAR IDIOMA
+    // =========================================
+
+    function cambiarIdioma(idioma) {
+
+        elementosTraducibles.forEach((elemento) => {
+
+            elemento.textContent = elemento.getAttribute(
+                `data-${idioma}`
+            );
+
+        });
+
+
+        // Cambiar texto del selector
+
+        if (idioma === "en") {
             languageText.textContent = "EN";
         } else {
             languageText.textContent = "ES";
         }
 
+
+        // Guardar idioma elegido
+
+        localStorage.setItem("idiomaPortfolio", idioma);
+    }
+
+
+    // =========================================
+    // CLICK EN EL SELECTOR
+    // =========================================
+
+    languageToggle.addEventListener("change", () => {
+
+        if (languageToggle.checked) {
+            cambiarIdioma("en");
+        } else {
+            cambiarIdioma("es");
+        }
+
     });
+
+
+    // =========================================
+    // RECORDAR IDIOMA
+    // =========================================
+
+    const idiomaGuardado =
+        localStorage.getItem("idiomaPortfolio") || "es";
+
+
+    if (idiomaGuardado === "en") {
+
+        languageToggle.checked = true;
+        cambiarIdioma("en");
+
+    } else {
+
+        languageToggle.checked = false;
+        cambiarIdioma("es");
+
+    }
 
 });
