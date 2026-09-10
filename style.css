@@ -3656,6 +3656,121 @@ body {
 .language-toggle input:checked + .language-slider::before {
     transform: translateX(28px);
 }
+/* =========================================
+   SELECTOR DE IDIOMA
+   ES / EN
+========================================= */
+
+.language-toggle {
+    position: absolute;
+
+    /* COMPUTADORA */
+    left: 475px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 90px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    z-index: 9999;
+}
+
+
+/* =========================================
+   OCULTAR CHECKBOX
+========================================= */
+
+.language-toggle input {
+    display: none;
+}
+
+
+/* =========================================
+   INTERRUPTOR
+========================================= */
+
+.language-slider {
+    position: absolute;
+
+    left: 0;
+    top: 6px;
+
+    width: 58px;
+    height: 30px;
+
+    background: #cfcfcf;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   CÍRCULO
+========================================= */
+
+.language-slider::before {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+    top: 2px;
+
+    width: 26px;
+    height: 26px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================
+   TEXTO ES / EN
+========================================= */
+
+.language-text {
+    position: absolute;
+
+    left: 65px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    user-select: none;
+}
+
+
+/* =========================================
+   EN ACTIVADO
+========================================= */
+
+.language-toggle input:checked + .language-slider {
+    background: #222222;
+}
+
+.language-toggle input:checked + .language-slider::before {
+    transform: translateX(28px);
+}
 
 
 /* =========================================
@@ -3665,6 +3780,8 @@ body {
 @media (max-width: 768px) {
 
     .language-toggle {
+
+        /* IZQUIERDA DEL CELULAR */
         left: 25px;
         right: auto;
 
@@ -3681,29 +3798,29 @@ body {
     }
 
 
-    /* Fondo del interruptor */
+    /* INTERRUPTOR CELULAR */
 
     .language-slider {
-        width: 46px;
-        height: 24px;
-
         left: 0;
         top: 6px;
+
+        width: 46px;
+        height: 24px;
     }
 
 
-    /* Círculo */
+    /* CÍRCULO CELULAR */
 
     .language-slider::before {
-        width: 20px;
-        height: 20px;
-
         left: 2px;
         top: 2px;
+
+        width: 20px;
+        height: 20px;
     }
 
 
-    /* Texto */
+    /* TEXTO CELULAR */
 
     .language-text {
         left: 52px;
@@ -3712,7 +3829,7 @@ body {
     }
 
 
-    /* Movimiento EN */
+    /* MOVIMIENTO EN */
 
     .language-toggle input:checked + .language-slider::before {
         transform: translateX(20px);
