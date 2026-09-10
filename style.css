@@ -3318,20 +3318,25 @@ body {
 @media (max-width: 768px) {
 
     .language-toggle {
-        position: absolute;
+    position: absolute;
 
-        right: 58px;
-        top: 50%;
+    right: 20px;
+    top: 50%;
 
-        transform: translateY(-50%);
+    transform: translateY(-50%);
 
-        width: 72px;
-        height: 36px;
+    width: 105px;
+    height: 42px;
 
-        margin: 0;
+    display: flex;
+    align-items: center;
 
-        z-index: 9999;
-    }
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    z-index: 9999;
+}
 
 
     .language-slider {
