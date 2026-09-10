@@ -3211,7 +3211,12 @@ body {
 ========================================= */
 
 .language-toggle {
-    position: relative;
+    position: absolute;
+
+    right: 35px;
+    top: 50%;
+
+    transform: translateY(-50%);
 
     width: 105px;
     height: 42px;
@@ -3221,14 +3226,13 @@ body {
 
     cursor: pointer;
 
-    margin-left: auto;
-    margin-right: 35px;
-
     font-family: Arial, sans-serif;
+
+    z-index: 9999;
 }
 
 
-/* Ocultar checkbox original */
+/* Ocultar checkbox */
 
 .language-toggle input {
     display: none;
@@ -3277,13 +3281,12 @@ body {
 }
 
 
-/* Texto */
+/* Texto ES / EN */
 
 .language-text {
     position: absolute;
 
     left: 68px;
-
     top: 50%;
 
     transform: translateY(-50%);
@@ -3291,32 +3294,24 @@ body {
     color: #ffffff;
 
     font-size: 15px;
-
     font-weight: 600;
 
     user-select: none;
 }
 
 
-/* Cuando está en EN */
+/* ACTIVADO — EN */
 
 .language-toggle input:checked + .language-slider {
     background: #222222;
 }
-
 
 .language-toggle input:checked + .language-slider::before {
     transform: translateX(28px);
 }
 
 
-.language-toggle input:checked ~ .language-text {
-    color: #ffffff;
-}
-
-
 /* =========================================
-   SELECTOR DE IDIOMA
    CELULAR
 ========================================= */
 
@@ -3325,7 +3320,7 @@ body {
     .language-toggle {
         position: absolute;
 
-        right: 68px;
+        right: 58px;
         top: 50%;
 
         transform: translateY(-50%);
