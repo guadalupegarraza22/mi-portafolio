@@ -3836,4 +3836,79 @@ body {
     }
 
 }
+/* =========================================================
+   RECUPERAR BLOQUE SOBRE MÍ
+   SOLO ESCRITORIO
+========================================================= */
 
+@media (min-width: 769px) {
+
+    .about {
+        width: 100% !important;
+        padding: 80px 8% 100px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+
+        background-image: url("fondo 10.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .about-container {
+        width: 100% !important;
+        max-width: 1500px !important;
+        min-height: 850px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+
+    .about-header-image {
+        width: 680px !important;
+        max-width: none !important;
+        height: auto !important;
+        display: block !important;
+
+        margin: 0 0 0 0 !important;
+        position: relative !important;
+        z-index: 3 !important;
+    }
+
+    .about-title-image {
+        width: 800px !important;
+        max-width: none !important;
+        height: auto !important;
+        display: block !important;
+
+        margin: 80px auto 40px auto !important;
+
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .about-images {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        position: relative !important;
+        z-index: 1 !important;
+    }
+
+    .about-main-image {
+        width: 1400px !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+
+        margin: 0 auto !important;
+
+        position: relative !important;
+        z-index: 1 !important;
+    }
+}
