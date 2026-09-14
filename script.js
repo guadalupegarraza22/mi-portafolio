@@ -220,10 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-// =========================================
-// CAMBIAR PORTADA SEGÚN EL IDIOMA
-// =========================================
-
 const portada = document.querySelector(".hero-image");
 
 if (portada) {
@@ -237,25 +233,27 @@ if (portada) {
     }
 
 }
+
+
+// =========================================
+// CAMBIAR TÍTULO SOBRE MÍ SEGÚN EL IDIOMA
+// =========================================
+
+const tituloSobreMi = document.querySelector(".about-title-image");
+
+if (tituloSobreMi) {
+
+    if (idioma === "en") {
+        tituloSobreMi.src = "About Me.png";
+        tituloSobreMi.alt = "About Me";
+    } else {
+        tituloSobreMi.src = "SOBRE MI 2.png";
+        tituloSobreMi.alt = "Sobre mí";
     }
 
-    // =========================================
-    // CAMBIAR TÍTULO SOBRE MÍ SEGÚN EL IDIOMA
-    // =========================================
+}
 
-    const tituloSobreMi = document.querySelector(".about-title-image");
-
-    if (tituloSobreMi) {
-
-        if (idioma === "en") {
-            tituloSobreMi.src = "About Me.png";
-            tituloSobreMi.alt = "About Me";
-        } else {
-            tituloSobreMi.src = "SOBRE MI 2.png";
-            tituloSobreMi.alt = "Sobre mí";
-        }
-
-    }
+}
 
     // Cambiar texto del selector
         // Cambiar texto del selector
