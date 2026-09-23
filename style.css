@@ -3837,13 +3837,18 @@ body {
 
 }
 /* =========================================
-   PORTADA INGLESA - MISMO ESPACIO QUE ES
+   PORTADA INGLESA
+   MISMO TAMAÑO VISUAL QUE ESPAÑOL
 ========================================= */
 
-.hero-image.english-cover {
-    width: 100%;
-    max-width: 1300px;
-    height: auto;
-    object-fit: contain;
+@media (min-width: 769px) {
+
+    .hero-image.english-cover {
+        width: min(92%, 1300px);
+        max-width: 1300px;
+        height: min(51.7247vw, 730.9px);
+        object-fit: contain;
+    }
+
 }
 
