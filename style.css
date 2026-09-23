@@ -3836,5 +3836,14 @@ body {
     }
 
 }
+/* =========================================
+   PORTADA INGLESA - MISMO ESPACIO QUE ES
+========================================= */
 
+.hero-image.english-cover {
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    object-fit: contain;
+}
 
