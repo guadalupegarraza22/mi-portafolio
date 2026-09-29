@@ -3851,4 +3851,18 @@ body {
     }
 
 }
+/* =========================================
+   PORTADA INGLESA - AJUSTE CELULAR
+========================================= */
 
+@media (max-width: 768px) {
+
+    .hero-image.english-cover {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: 0 !important;
+        object-fit: contain !important;
+    }
+
+}
