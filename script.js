@@ -238,6 +238,23 @@ if (portada) {
     portada.classList.remove("english-cover");
 }
 }
+   // =========================================
+// CAMBIAR TÍTULO SOBRE MÍ SEGÚN EL IDIOMA
+// =========================================
+
+const tituloSobreMi = document.querySelector(".about-title-image");
+
+if (tituloSobreMi) {
+
+    if (idioma === "en") {
+        tituloSobreMi.src = "About Me.png";
+        tituloSobreMi.alt = "About Me";
+    } else {
+        tituloSobreMi.src = "SOBRE MI 2.png";
+        tituloSobreMi.alt = "Sobre mí";
+    }
+
+}     
         // Cambiar texto del selector
 
         if (idioma === "en") {
