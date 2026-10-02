@@ -254,6 +254,23 @@ if (tituloSobreMi) {
         tituloSobreMi.alt = "Sobre mí";
     }
 
+}   
+   // =========================================
+// CAMBIAR IMAGEN SOBRE MÍ SEGÚN EL IDIOMA
+// =========================================
+
+const imagenSobreMi = document.querySelector(".about-main-image");
+
+if (imagenSobreMi) {
+
+    if (idioma === "en") {
+        imagenSobreMi.src = "foto About Me.png";
+        imagenSobreMi.alt = "About Me";
+    } else {
+        imagenSobreMi.src = "FOTO SOBRE MI.png";
+        imagenSobreMi.alt = "Sobre mí";
+    }
+
 }     
         // Cambiar texto del selector
 
