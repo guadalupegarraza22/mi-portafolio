@@ -3866,3 +3866,10 @@ body {
     }
 
 }
+/* =========================================
+   VELOCIDAD SEGUNDA MARQUESINA
+   ========================================= */
+
+.second-marquee .marquee-track {
+    animation-duration: 25s;
+}
