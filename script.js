@@ -247,12 +247,14 @@ const tituloSobreMi = document.querySelector(".about-title-image");
 if (tituloSobreMi) {
 
     if (idioma === "en") {
-        tituloSobreMi.src = "About Me.png";
-        tituloSobreMi.alt = "About Me";
-    } else {
-        tituloSobreMi.src = "SOBRE MI 2.png";
-        tituloSobreMi.alt = "Sobre mí";
-    }
+    imagenSobreMi.src = "foto About Me.png";
+    imagenSobreMi.alt = "About Me";
+    imagenSobreMi.classList.add("english-about");
+} else {
+    imagenSobreMi.src = "FOTO SOBRE MI.png";
+    imagenSobreMi.alt = "Sobre mí";
+    imagenSobreMi.classList.remove("english-about");
+}
 
 }   
    // =========================================
