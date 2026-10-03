@@ -239,21 +239,21 @@ if (portada) {
 // CAMBIAR TÍTULO SOBRE MÍ SEGÚN EL IDIOMA
 // =========================================
 
-const tituloSobreMi = document.querySelector(".about-title-image");
+ const imagenSobreMi = document.querySelector(".about-main-image");
 
-if (tituloSobreMi) {
+if (imagenSobreMi) {
 
     if (idioma === "en") {
-    imagenSobreMi.src = "foto About Me.png";
-    imagenSobreMi.alt = "About Me";
-    imagenSobreMi.classList.add("english-about");
-} else {
-    imagenSobreMi.src = "FOTO SOBRE MI.png";
-    imagenSobreMi.alt = "Sobre mí";
-    imagenSobreMi.classList.remove("english-about");
-}
+        imagenSobreMi.src = "foto About Me.png";
+        imagenSobreMi.alt = "About Me";
+        imagenSobreMi.classList.add("english-about");
+    } else {
+        imagenSobreMi.src = "FOTO SOBRE MI.png";
+        imagenSobreMi.alt = "Sobre mí";
+        imagenSobreMi.classList.remove("english-about");
+    }
 
-}   
+} 
    // =========================================
 // CAMBIAR IMAGEN SOBRE MÍ SEGÚN EL IDIOMA
 // =========================================
