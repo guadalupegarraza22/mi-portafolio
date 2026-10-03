@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-// =========================================
+   // =========================================
 // CAMBIAR PORTADA SEGÚN EL IDIOMA
 // =========================================
 
@@ -228,18 +228,41 @@ const portada = document.querySelector(".hero-image");
 
 if (portada) {
 
- if (idioma === "en") {
-    imagenSobreMi.src = "foto About Me.png";
-    imagenSobreMi.alt = "About Me";
-} else {
-    imagenSobreMi.src = "FOTO SOBRE MI.png";
-    imagenSobreMi.alt = "Sobre mí";
+    if (idioma === "en") {
+        portada.src = "titulo ingles.png";
+        portada.alt = "Portfolio Guadalupe Garraza - English";
+        portada.classList.add("english-cover");
+    } else {
+        portada.src = "baner.png";
+        portada.alt = "Portfolio Guadalupe Garraza";
+        portada.classList.remove("english-cover");
+    }
+
 }
-   // =========================================
+
+// =========================================
 // CAMBIAR TÍTULO SOBRE MÍ SEGÚN EL IDIOMA
 // =========================================
 
- const imagenSobreMi = document.querySelector(".about-main-image");
+const tituloSobreMi = document.querySelector(".about-title-image");
+
+if (tituloSobreMi) {
+
+    if (idioma === "en") {
+        tituloSobreMi.src = "About Me.png";
+        tituloSobreMi.alt = "About Me";
+    } else {
+        tituloSobreMi.src = "SOBRE MI 2.png";
+        tituloSobreMi.alt = "Sobre mí";
+    }
+
+}
+
+// =========================================
+// CAMBIAR IMAGEN SOBRE MÍ SEGÚN EL IDIOMA
+// =========================================
+
+const imagenSobreMi = document.querySelector(".about-main-image");
 
 if (imagenSobreMi) {
 
@@ -253,24 +276,7 @@ if (imagenSobreMi) {
         imagenSobreMi.classList.remove("english-about");
     }
 
-} 
-   // =========================================
-// CAMBIAR IMAGEN SOBRE MÍ SEGÚN EL IDIOMA
-// =========================================
-
-const imagenSobreMi = document.querySelector(".about-main-image");
-
-if (imagenSobreMi) {
-
-    if (idioma === "en") {
-        imagenSobreMi.src = "foto About Me.png";
-        imagenSobreMi.alt = "About Me";
-    } else {
-        imagenSobreMi.src = "FOTO SOBRE MI.png";
-        imagenSobreMi.alt = "Sobre mí";
-    }
-
-}     
+}
         // Cambiar texto del selector
 
         if (idioma === "en") {
