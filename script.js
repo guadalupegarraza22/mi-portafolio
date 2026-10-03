@@ -228,15 +228,12 @@ const portada = document.querySelector(".hero-image");
 
 if (portada) {
 
-  if (idioma === "en") {
-    portada.src = "titulo ingles.png";
-    portada.alt = "Portfolio Guadalupe Garraza - English";
-    portada.classList.add("english-cover");
+ if (idioma === "en") {
+    imagenSobreMi.src = "foto About Me.png";
+    imagenSobreMi.alt = "About Me";
 } else {
-    portada.src = "baner.png";
-    portada.alt = "Portfolio Guadalupe Garraza";
-    portada.classList.remove("english-cover");
-}
+    imagenSobreMi.src = "FOTO SOBRE MI.png";
+    imagenSobreMi.alt = "Sobre mí";
 }
    // =========================================
 // CAMBIAR TÍTULO SOBRE MÍ SEGÚN EL IDIOMA
