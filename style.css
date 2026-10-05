@@ -3105,14 +3105,14 @@ body {
 
     .sobres-navegacion {
         width: 100%;
-        gap: 8px;
+        gap: 0px;
         margin: 100px auto 45px;
         position: relative;
         z-index: 100 !important;
     }
 
     .sobre-boton {
-        width: 24%;
+        width: 25%;
         display: flex;
         justify-content: center;
         position: relative;
