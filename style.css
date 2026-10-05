@@ -3885,18 +3885,19 @@ body {
 
 }
 /* =========================================
-   TÍTULO SKILLS - SOLO INGLÉS
+   TÍTULO SKILLS EN INGLÉS
 ========================================= */
 
-.skills-title-image.english-skills {
-    width: 500px !important;
-    max-width: none !important;
+.skills-title-image[src="titulo skills.png"] {
+    width: 350px !important;
+    max-width: 350px !important;
+    height: auto !important;
     transition: transform 0.4s ease;
 }
 
-/* INTERACCIÓN AL PASAR EL MOUSE */
+/* INTERACCIÓN */
 
-.skills-title-image.english-skills:hover {
+.skills-title-image[src="titulo skills.png"]:hover {
     transform: scale(0.94);
 }
 
@@ -3904,9 +3905,9 @@ body {
 
 @media (max-width: 768px) {
 
-    .skills-title-image.english-skills {
-        width: 200px !important;
-        max-width: none !important;
+    .skills-title-image[src="titulo skills.png"] {
+        width: 160px !important;
+        max-width: 160px !important;
         margin-bottom: 50px !important;
     }
 
