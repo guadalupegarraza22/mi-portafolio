@@ -277,6 +277,23 @@ if (imagenSobreMi) {
     }
 
 }
+        // =========================================
+// CAMBIAR TÍTULO HABILIDADES SEGÚN EL IDIOMA
+// =========================================
+
+const tituloHabilidades = document.querySelector(".skills-title-image");
+
+if (tituloHabilidades) {
+
+    if (idioma === "en") {
+        tituloHabilidades.src = "titulo skills.png";
+        tituloHabilidades.alt = "Skills";
+    } else {
+        tituloHabilidades.src = "habilidades 2.png";
+        tituloHabilidades.alt = "Habilidades";
+    }
+
+}
         // Cambiar texto del selector
 
         if (idioma === "en") {
