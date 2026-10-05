@@ -3884,3 +3884,16 @@ body {
     }
 
 }
+/* =========================================
+   TÍTULO SKILLS - SOLO INGLÉS EN CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .skills-title-image.english-skills {
+        width: 300px !important;
+        max-width: none !important;
+        margin-bottom: 50px !important;
+    }
+
+}
