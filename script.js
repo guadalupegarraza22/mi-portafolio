@@ -285,10 +285,6 @@ const tituloHabilidades = document.querySelector(".skills-title-image");
 
 if (tituloHabilidades) {
 
-const tituloHabilidades = document.querySelector(".skills-title-image");
-
-if (tituloHabilidades) {
-
     if (idioma === "en") {
         tituloHabilidades.src = "titulo skills.png";
         tituloHabilidades.alt = "Skills";
