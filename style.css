@@ -3889,13 +3889,15 @@ body {
 ========================================= */
 
 .skills-title-image.english-skills {
+    width: 500px !important;
+    max-width: none !important;
     transition: transform 0.4s ease;
 }
 
 /* INTERACCIÓN AL PASAR EL MOUSE */
 
 .skills-title-image.english-skills:hover {
-    transform: scale(0.92);
+    transform: scale(0.94);
 }
 
 /* CELULAR */
@@ -3903,7 +3905,7 @@ body {
 @media (max-width: 768px) {
 
     .skills-title-image.english-skills {
-        width: 240px !important;
+        width: 200px !important;
         max-width: none !important;
         margin-bottom: 50px !important;
     }
