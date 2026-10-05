@@ -3885,13 +3885,25 @@ body {
 
 }
 /* =========================================
-   TÍTULO SKILLS - SOLO INGLÉS EN CELULAR
+   TÍTULO SKILLS - SOLO INGLÉS
 ========================================= */
+
+.skills-title-image.english-skills {
+    transition: transform 0.4s ease;
+}
+
+/* INTERACCIÓN AL PASAR EL MOUSE */
+
+.skills-title-image.english-skills:hover {
+    transform: scale(0.92);
+}
+
+/* CELULAR */
 
 @media (max-width: 768px) {
 
     .skills-title-image.english-skills {
-        width: 300px !important;
+        width: 240px !important;
         max-width: none !important;
         margin-bottom: 50px !important;
     }
