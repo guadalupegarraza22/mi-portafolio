@@ -296,7 +296,7 @@ if (tituloHabilidades) {
     }
 
 }
-        }
+
 
 // =========================================
 // CAMBIAR SOBRES DE NAVEGACIÓN SEGÚN EL IDIOMA
@@ -343,8 +343,6 @@ if (sobres.length >= 5) {
     }
 
 }
-
-// Cambiar texto del selector
         // Cambiar texto del selector
 
         if (idioma === "en") {
