@@ -3912,3 +3912,14 @@ body {
     }
 
 }
+/* TÍTULO MIS PROYECTOS EN INGLÉS */
+
+@media (min-width: 769px) {
+
+    .projects-title-image.english-projects {
+        width: 550px;
+        max-width: 90%;
+        height: auto;
+    }
+
+}
