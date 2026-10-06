@@ -1672,7 +1672,7 @@ body {
 .projects-titles {
     width: 100%;
     max-width: 1500px;
-    margin: -30 auto;
+    margin: 40 auto;
 
     display: flex;
     justify-content: space-between;
