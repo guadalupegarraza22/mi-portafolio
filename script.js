@@ -296,6 +296,55 @@ if (tituloHabilidades) {
     }
 
 }
+        }
+
+// =========================================
+// CAMBIAR SOBRES DE NAVEGACIÓN SEGÚN EL IDIOMA
+// =========================================
+
+const sobres = document.querySelectorAll(".sobres-navegacion .sobre-boton img");
+
+if (sobres.length >= 5) {
+
+    if (idioma === "en") {
+
+        sobres[0].src = "sobre ingles 1.png";
+        sobres[0].alt = "Home";
+
+        sobres[1].src = "sobre ingles 2.png";
+        sobres[1].alt = "About Me";
+
+        sobres[2].src = "sobre ingles 3.png";
+        sobres[2].alt = "My Projects";
+
+        sobres[3].src = "sobre ingles 4 (2).png";
+        sobres[3].alt = "Certificates";
+
+        sobres[4].src = "sobre ingles 5.png";
+        sobres[4].alt = "Skills";
+
+    } else {
+
+        sobres[0].src = "sobre español 1.png";
+        sobres[0].alt = "Inicio";
+
+        sobres[1].src = "sobre español 2.png";
+        sobres[1].alt = "Sobre mí";
+
+        sobres[2].src = "sobre español 3.png";
+        sobres[2].alt = "Mis Proyectos";
+
+        sobres[3].src = "sobre español 4.png";
+        sobres[3].alt = "Certificados";
+
+        sobres[4].src = "sobre español 5.png";
+        sobres[4].alt = "Habilidades";
+
+    }
+
+}
+
+// Cambiar texto del selector
         // Cambiar texto del selector
 
         if (idioma === "en") {
