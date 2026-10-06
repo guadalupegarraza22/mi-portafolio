@@ -3923,3 +3923,10 @@ body {
     }
 
 }
+@media (min-width: 769px) {
+
+    .projects-title {
+        margin-bottom: 0;
+    }
+
+}
