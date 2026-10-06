@@ -296,7 +296,23 @@ if (tituloHabilidades) {
     }
 
 }
+// =========================================
+// CAMBIAR TÍTULO MIS PROYECTOS SEGÚN EL IDIOMA
+// =========================================
 
+const tituloProyectos = document.querySelector(".projects-title-image");
+
+if (tituloProyectos) {
+
+    if (idioma === "en") {
+        tituloProyectos.src = "titulo my projects.png";
+        tituloProyectos.alt = "My Projects";
+    } else {
+        tituloProyectos.src = "mis proyectos (2).png";
+        tituloProyectos.alt = "Mis Proyectos";
+    }
+
+}
 
 // =========================================
 // CAMBIAR SOBRES DE NAVEGACIÓN SEGÚN EL IDIOMA
