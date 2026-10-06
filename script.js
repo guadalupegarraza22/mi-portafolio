@@ -305,12 +305,14 @@ const tituloProyectos = document.querySelector(".projects-title-image");
 if (tituloProyectos) {
 
     if (idioma === "en") {
-        tituloProyectos.src = "titulo my projects.png";
-        tituloProyectos.alt = "My Projects";
-    } else {
-        tituloProyectos.src = "mis proyectos (2).png";
-        tituloProyectos.alt = "Mis Proyectos";
-    }
+    tituloProyectos.src = "titulo my projects.png";
+    tituloProyectos.classList.add("english-projects");
+    tituloProyectos.alt = "My Projects";
+} else {
+    tituloProyectos.src = "mis proyectos (2).png";
+    tituloProyectos.classList.remove("english-projects");
+    tituloProyectos.alt = "Mis Proyectos";
+}
 
 }
 
