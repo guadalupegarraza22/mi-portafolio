@@ -325,13 +325,13 @@ if (titulosProyectos.length >= 3) {
 
     if (idioma === "en") {
 
-        titulosProyectos[0].src = "proyecto 1.png";
+        titulosProyectos[0].src = "PROYECTO 1.png";
         titulosProyectos[0].alt = "Project 1";
 
-        titulosProyectos[1].src = "proyecto 2.png";
+        titulosProyectos[1].src = "PROYECTO 2.png";
         titulosProyectos[1].alt = "Project 2";
 
-        titulosProyectos[2].src = "proyecto 3.png";
+        titulosProyectos[2].src = "PROYECTO 3.png";
         titulosProyectos[2].alt = "Project 3";
 
     } else {
