@@ -315,7 +315,39 @@ if (tituloProyectos) {
 }
 
 }
+// =========================================
+// CAMBIAR TÍTULOS DE PROYECTOS SEGÚN EL IDIOMA
+// =========================================
 
+const titulosProyectos = document.querySelectorAll(".project-title-image");
+
+if (titulosProyectos.length >= 3) {
+
+    if (idioma === "en") {
+
+        titulosProyectos[0].src = "proyecto 1.png";
+        titulosProyectos[0].alt = "Project 1";
+
+        titulosProyectos[1].src = "proyecto 2.png";
+        titulosProyectos[1].alt = "Project 2";
+
+        titulosProyectos[2].src = "proyecto 3.png";
+        titulosProyectos[2].alt = "Project 3";
+
+    } else {
+
+        titulosProyectos[0].src = "titulo 1.png";
+        titulosProyectos[0].alt = "Ecommerce de producto digital";
+
+        titulosProyectos[1].src = "titulo 2.png";
+        titulosProyectos[1].alt = "Página web personalizada";
+
+        titulosProyectos[2].src = "titulo 3.png";
+        titulosProyectos[2].alt = "Página web de Dropshipping";
+
+    }
+
+}
 // =========================================
 // CAMBIAR SOBRES DE NAVEGACIÓN SEGÚN EL IDIOMA
 // =========================================
