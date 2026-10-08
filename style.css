@@ -3941,3 +3941,15 @@ body {
     }
 
 }
+
+/* =========================================
+   SEPARAR TÍTULOS EN INGLÉS — SOLO CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .projects-title-image.english-projects {
+        margin-bottom: 55px !important;
+    }
+
+}
