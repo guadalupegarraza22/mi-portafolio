@@ -358,6 +358,7 @@ if (titulosProyectos.length >= 3) {
     }
 
 }
+}    
 // =========================================
 // CAMBIAR SOBRES DE NAVEGACIÓN SEGÚN EL IDIOMA
 // =========================================
