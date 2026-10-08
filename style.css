@@ -3931,13 +3931,13 @@ body {
 
 }
 /* =========================================
-   BAJAR VIDEOS — SOLO TÍTULOS EN INGLÉS
+   BAJAR VIDEOS EN INGLÉS
 ========================================= */
 
 @media (min-width: 769px) {
 
-    .projects:has(.english-project-title) .projects-videos {
-        margin-top: 50px;
+    .projects-videos.english-project-videos {
+        margin-top: 50px !important;
     }
 
 }
