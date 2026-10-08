@@ -3930,3 +3930,14 @@ body {
     }
 
 }
+/* =========================================
+   BAJAR VIDEOS — SOLO TÍTULOS EN INGLÉS
+========================================= */
+
+@media (min-width: 769px) {
+
+    .projects:has(.english-project-title) .projects-videos {
+        margin-top: 50px;
+    }
+
+}
