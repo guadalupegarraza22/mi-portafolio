@@ -323,28 +323,38 @@ const titulosProyectos = document.querySelectorAll(".project-title-image");
 
 if (titulosProyectos.length >= 3) {
 
-    if (idioma === "en") {
+ if (idioma === "en") {
 
-        titulosProyectos[0].src = "PROYECTO 1.png";
-        titulosProyectos[0].alt = "Project 1";
+    titulosProyectos[0].src = "PROYECTO 1.png";
+    titulosProyectos[0].alt = "Project 1";
 
-        titulosProyectos[1].src = "PROYECTO 2.png";
-        titulosProyectos[1].alt = "Project 2";
+    titulosProyectos[1].src = "PROYECTO 2.png";
+    titulosProyectos[1].alt = "Project 2";
 
-        titulosProyectos[2].src = "PROYECTO 3.png";
-        titulosProyectos[2].alt = "Project 3";
+    titulosProyectos[2].src = "PROYECTO 3.png";
+    titulosProyectos[2].alt = "Project 3";
 
-    } else {
+    const videosProyectos = document.querySelector(".projects-videos");
 
-        titulosProyectos[0].src = "titulo 1.png";
-        titulosProyectos[0].alt = "Ecommerce de producto digital";
+    if (videosProyectos) {
+        videosProyectos.classList.add("english-project-videos");
+    }
 
-        titulosProyectos[1].src = "titulo 2.png";
-        titulosProyectos[1].alt = "Página web personalizada";
+} else {
 
-        titulosProyectos[2].src = "titulo 3.png";
-        titulosProyectos[2].alt = "Página web de Dropshipping";
+    titulosProyectos[0].src = "titulo 1.png";
+    titulosProyectos[0].alt = "Ecommerce de producto digital";
 
+    titulosProyectos[1].src = "titulo 2.png";
+    titulosProyectos[1].alt = "Página web personalizada";
+
+    titulosProyectos[2].src = "titulo 3.png";
+    titulosProyectos[2].alt = "Página web de Dropshipping";
+
+    const videosProyectos = document.querySelector(".projects-videos");
+
+    if (videosProyectos) {
+        videosProyectos.classList.remove("english-project-videos");
     }
 
 }
