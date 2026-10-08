@@ -358,7 +358,44 @@ if (titulosProyectos.length >= 3) {
     }
 
 }
-}    
+}  
+ 
+    // =========================================
+    // CAMBIAR DESCRIPCIONES SEGÚN EL IDIOMA
+    // =========================================
+
+    const descripcionesProyectos = document.querySelectorAll(
+        ".project-description-image"
+    );
+
+    if (descripcionesProyectos.length >= 3) {
+
+        if (idioma === "en") {
+
+            descripcionesProyectos[0].src = "ingles descripcion 1.png";
+            descripcionesProyectos[0].alt = "Project 1 description";
+
+            descripcionesProyectos[1].src = "ingles descripcion 2.png";
+            descripcionesProyectos[1].alt = "Project 2 description";
+
+            descripcionesProyectos[2].src = "ingles descripcion 3.png";
+            descripcionesProyectos[2].alt = "Project 3 description";
+
+        } else {
+
+            descripcionesProyectos[0].src = "descripcion 1.png";
+            descripcionesProyectos[0].alt = "Descripción del proyecto 1";
+
+            descripcionesProyectos[1].src = "descripcion 2.png";
+            descripcionesProyectos[1].alt = "Descripción del proyecto 2";
+
+            descripcionesProyectos[2].src = "descripcion 3.png";
+            descripcionesProyectos[2].alt = "Descripción del proyecto 3";
+
+        }
+
+    }
+       
 // =========================================
 // CAMBIAR SOBRES DE NAVEGACIÓN SEGÚN EL IDIOMA
 // =========================================
