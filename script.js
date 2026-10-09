@@ -296,6 +296,23 @@ if (tituloHabilidades) {
     }
 
 }
+  // =========================================
+// CAMBIAR TÍTULO CERTIFICADOS SEGÚN EL IDIOMA
+// =========================================
+
+const tituloCertificados = document.querySelector(".certificados-title-image");
+
+if (tituloCertificados) {
+
+    if (idioma === "en") {
+        tituloCertificados.src = "titulo ingles certificates.png";
+        tituloCertificados.alt = "Certificates";
+    } else {
+        tituloCertificados.src = "titulo certificados.png";
+        tituloCertificados.alt = "Certificados";
+    }
+
+}      
 // =========================================
 // CAMBIAR TÍTULO MIS PROYECTOS SEGÚN EL IDIOMA
 // =========================================
